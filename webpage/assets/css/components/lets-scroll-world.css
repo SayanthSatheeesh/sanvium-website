@@ -1,0 +1,343 @@
+/* ==========================================================================
+   lets-scroll: Fly-Through Studio World Experience
+   Theme: High-Tech Electric Yellow (#FFE500) & Obsidian Black (#080808)
+   Desktop: pinned + scroll-scrubbed scenes. Touch: auto-cycling + swipe.
+   ========================================================================== */
+
+.agency-world-section {
+  position: relative;
+  width: 100%;
+  background: var(--color-void, #080808);
+  padding: 0;
+  margin: 0;
+  /* clip (not hidden) so it doesn't become a scroll container and break position: sticky */
+  overflow: clip;
+}
+
+.world-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.world-sticky {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 65% 50%, #12141A 0%, #080808 75%);
+}
+
+.world-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  display: block;
+}
+
+/* World HUD / Header */
+.world-hud {
+  position: absolute;
+  top: clamp(24px, 4vh, 44px);
+  left: clamp(20px, 4vw, 48px);
+  right: clamp(20px, 4vw, 48px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.world-hud__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 18, 22, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border-accent, rgba(255, 229, 0, 0.48));
+  padding: 8px 18px;
+  border-radius: var(--radius-full, 9999px);
+  font-family: var(--font-mono, monospace);
+  font-size: var(--fs-xs, 0.75rem);
+  color: var(--color-volt, #FFE500);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.world-hud__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-volt, #FFE500);
+  box-shadow: 0 0 12px var(--color-volt, #FFE500);
+  animation: pulse-hud-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-hud-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.75); opacity: 0.5; }
+}
+
+.world-hud__controls {
+  font-family: var(--font-mono, monospace);
+  font-size: var(--fs-xs, 0.75rem);
+  color: var(--color-text-secondary, #A1A1AA);
+  background: rgba(16, 18, 22, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 8px 16px;
+  border-radius: var(--radius-full, 9999px);
+  border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+  letter-spacing: 0.08em;
+}
+
+/* Route Rail Navigation */
+.world-rail {
+  position: absolute;
+  right: clamp(16px, 3.5vw, 44px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.world-rail__step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  outline: none;
+}
+
+.world-rail__indicator {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.world-rail__step:hover .world-rail__indicator,
+.world-rail__step.is-active .world-rail__indicator {
+  width: 14px;
+  height: 14px;
+  background: var(--color-volt, #FFE500);
+  box-shadow: 0 0 16px var(--color-volt, #FFE500);
+  border-color: var(--color-volt, #FFE500);
+}
+
+.world-rail__label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.6875rem;
+  color: var(--color-text-muted, #52525B);
+  opacity: 0;
+  transform: translateX(8px);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+}
+
+.world-rail__step:hover .world-rail__label,
+.world-rail__step.is-active .world-rail__label {
+  opacity: 1;
+  color: var(--color-volt, #FFE500);
+  transform: translateX(0);
+}
+
+/* Scene Content Container & Cards */
+.world-scenes {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: var(--container-max, 1280px);
+  margin-inline: auto;
+  padding-inline: var(--container-padding, clamp(1.25rem, 5vw, 4rem));
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.world-card {
+  width: 100%;
+  max-width: 640px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(48px) saturate(140%);
+  -webkit-backdrop-filter: blur(48px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl, 32px);
+  padding: clamp(32px, 5vw, 56px);
+  box-shadow: 
+    0 32px 64px rgba(0, 0, 0, 0.5), 
+    0 0 60px rgba(255, 229, 0, 0.12),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 0 30px rgba(255, 255, 255, 0.03);
+  pointer-events: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, calc(-50% + 40px)) scale(0.95);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0s 0.7s;
+}
+
+.world-card.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0s 0s;
+}
+
+.world-card__num {
+  font-family: var(--font-mono, monospace);
+  font-size: var(--fs-xs, 0.75rem);
+  color: var(--color-volt, #FFE500);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: inline-block;
+  font-weight: 700;
+  background: rgba(255, 229, 0, 0.1);
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 229, 0, 0.2);
+}
+
+.world-card__title {
+  font-family: var(--font-heading, sans-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4, 20px);
+  color: var(--color-text-primary, #FAFAFA);
+  text-transform: uppercase;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.world-card__desc {
+  font-family: var(--font-body, sans-serif);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: var(--color-text-secondary, #A1A1AA);
+  line-height: 1.6;
+  margin-bottom: var(--space-6, 32px);
+  max-width: 480px;
+}
+
+.world-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.world-card__tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  color: var(--color-text-primary, #FAFAFA);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 16px;
+  border-radius: var(--radius-full, 9999px);
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.world-card__tag:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-volt, #FFE500);
+}
+
+/* Scene progress bar at bottom */
+.world-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  z-index: 15;
+}
+
+.world-progress__bar {
+  height: 100%;
+  background: var(--color-volt, #FFE500);
+  box-shadow: 0 0 12px var(--color-volt, #FFE500);
+  width: 0%;
+  transition: width 4s linear;
+}
+
+.world-progress__bar.is-running {
+  width: 100%;
+}
+
+/* Desktop pin: ~5 viewports of scroll drive the 5 scenes (mirrors PIN_QUERY in loco-scroll.js) */
+@media (hover: hover) and (pointer: fine) and (min-width: 992px) and (prefers-reduced-motion: no-preference) {
+  .world-container {
+    height: 500vh;
+  }
+
+  .world-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    height: 100dvh;
+  }
+}
+
+/* Scroll-scrubbed mode: progress bar follows scroll directly */
+.agency-world-section.is-scrubbed .world-progress__bar {
+  transition: none;
+  width: 100%;
+  transform-origin: left center;
+}
+
+@media (max-width: 600px) {
+  .world-hud__controls {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .world-card {
+    left: 20px;
+    right: 20px;
+    max-width: calc(100% - 40px);
+    padding: 24px 20px;
+  }
+  .world-rail {
+    display: none;
+  }
+}

@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Locomotive Scroll & Smooth Inertia Styles
+   ========================================================================== */
+
+html.has-scroll-smooth {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+}
+
+html.has-scroll-smooth body {
+  overflow: hidden;
+  height: 100%;
+}
+
+html.has-scroll-dragging {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+  will-change: transform;
+}
+
+/* Ensure fixed UI stays floating above the virtual scroll canvas */
+.nav-dock,
+.nav-overlay,
+.project-modal,
+.cursor-glow {
+  position: fixed !important;
+  z-index: 1000;
+}
+
+/* Locomotive Scrollbar Styling */
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 7px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+  z-index: 9999;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar,
+.c-scrollbar:hover {
+  opacity: 1;
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-volt, #D4FF00);
+  opacity: 0.8;
+  width: 5px;
+  border-radius: 9999px;
+  margin: 2px;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: grabbing;
+  opacity: 1;
+}

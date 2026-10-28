@@ -1,0 +1,410 @@
+/* Project Card Live iFrame & Modal Preview Styles */
+
+/* Live Scaled iFrame Wrapper inside Project Card */
+.project-card__iframe-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: var(--color-surface-02, #121212);
+  border-bottom: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+}
+
+.project-card--large .project-card__iframe-wrap {
+  aspect-ratio: 16/9;
+}
+
+/* Scaled iFrame container trick for crisp desktop preview */
+.project-card__iframe-scale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px; /* Simulated desktop resolution */
+  height: 900px;
+  transform-origin: 0 0;
+  pointer-events: none; /* Allows card clicks */
+  border: none;
+  background: #000;
+  transition: transform var(--transition-slow, 0.5s ease);
+}
+
+.project-card__thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-card__thumbnail {
+  transform: scale(1.03);
+}
+
+.project-card__iframe-wrap iframe {
+  width: 1440px;
+  height: 900px;
+  border: none;
+  pointer-events: none;
+}
+
+/* Overlay over card preview */
+.project-card__overlay-trigger {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 8, 8, 0.4);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3, 12px);
+  opacity: 0;
+  transition: opacity var(--transition-base, 0.3s ease), background var(--transition-base, 0.3s ease);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.project-card:hover .project-card__overlay-trigger {
+  opacity: 1;
+  background: rgba(8, 8, 8, 0.7);
+}
+
+.project-card__preview-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2, 8px);
+  background: var(--color-volt, #CCFF00);
+  color: var(--color-text-inverse, #000);
+  padding: 10px 20px;
+  border-radius: var(--radius-full, 9999px);
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: var(--fs-sm, 0.875rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transform: translateY(10px);
+  transition: transform 0.3s ease, background 0.2s ease;
+  box-shadow: 0 8px 24px rgba(204, 255, 0, 0.25);
+}
+
+.project-card:hover .project-card__preview-btn {
+  transform: translateY(0);
+}
+
+.project-card__preview-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Real full-page screenshot that "browses" top → bottom on hover */
+.project-card__thumbnail--scroll {
+  object-position: 50% 0%;
+  transition: object-position 7s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.project-card:hover .project-card__thumbnail--scroll {
+  transform: none;
+  object-position: 50% 100%;
+}
+
+/* Overlay with live-site + quick-preview actions (overrides the click-anywhere trigger) */
+.project-card__overlay-trigger--actions {
+  flex-direction: row;
+  flex-wrap: wrap;
+  cursor: default;
+  background: linear-gradient(to top, rgba(8, 8, 8, 0.75), rgba(8, 8, 8, 0.15) 60%);
+  backdrop-filter: none;
+}
+
+.project-card:hover .project-card__overlay-trigger--actions {
+  background: linear-gradient(to top, rgba(8, 8, 8, 0.85), rgba(8, 8, 8, 0.25) 60%);
+}
+
+.project-card__action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2, 8px);
+  padding: 10px 20px;
+  border-radius: var(--radius-full, 9999px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(8, 8, 8, 0.6);
+  backdrop-filter: blur(8px);
+  color: var(--color-text-primary, #FAFAFA);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm, 0.875rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transform: translateY(10px);
+  transition: transform 0.3s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover .project-card__action,
+.project-card__action:focus-visible {
+  transform: translateY(0);
+}
+
+.project-card__action:hover {
+  border-color: var(--color-volt);
+}
+
+.project-card__action--primary {
+  background: var(--color-volt);
+  border-color: var(--color-volt);
+  color: var(--color-text-inverse);
+  box-shadow: 0 8px 24px rgba(255, 229, 0, 0.25);
+}
+
+.project-card__action--primary:hover {
+  background: var(--color-volt-hover);
+}
+
+.project-card__action svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Keyboard users: reveal the overlay when an action is focused */
+.project-card:focus-within .project-card__overlay-trigger--actions {
+  opacity: 1;
+}
+
+/* Live domain link under the card title */
+.project-card__domain {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2, 8px);
+  align-self: flex-start;
+  margin-top: var(--space-3, 12px);
+  padding: 6px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full, 9999px);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs, 0.75rem);
+  letter-spacing: 0.04em;
+  color: var(--color-silver);
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.project-card__domain:hover {
+  color: var(--color-volt);
+  border-color: var(--color-border-accent);
+}
+
+.project-card__domain svg {
+  width: 14px;
+  height: 14px;
+}
+
+.project-card__domain-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-success);
+  box-shadow: 0 0 8px var(--color-success);
+}
+
+/* Touch: no hover, so keep the actions visible along the bottom of the preview */
+@media (hover: none) {
+  .project-card__overlay-trigger--actions {
+    opacity: 1;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: var(--space-4, 16px);
+    background: linear-gradient(to top, rgba(8, 8, 8, 0.8), transparent 55%);
+  }
+
+  .project-card__action {
+    transform: none;
+    padding: 8px 14px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Live Website Preview Modal */
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  background: rgba(4, 4, 4, 0.85);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.project-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-modal__container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  height: 90vh;
+  background: var(--color-surface-01, #0d0d0d);
+  border: 1px solid var(--color-border-accent, rgba(204, 255, 0, 0.3));
+  border-radius: var(--radius-xl, 16px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), 0 0 40px rgba(204, 255, 0, 0.1);
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-modal.is-open .project-modal__container {
+  transform: scale(1);
+}
+
+.project-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: var(--color-surface-02, #141414);
+  border-bottom: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+}
+
+.project-modal__title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-modal__title {
+  font-family: var(--font-heading, 'Barlow Condensed', sans-serif);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 800;
+  color: var(--color-text-primary, #fff);
+  margin: 0;
+}
+
+.project-modal__badge {
+  background: var(--color-volt-dim, rgba(204, 255, 0, 0.15));
+  color: var(--color-volt, #CCFF00);
+  border: 1px solid var(--color-border-accent, rgba(204, 255, 0, 0.4));
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+.project-modal__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.project-modal__ext-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-volt, #CCFF00);
+  color: var(--color-text-inverse, #000);
+  text-decoration: none;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.project-modal__ext-link:hover {
+  background: #e0ff4d;
+  transform: translateY(-1px);
+}
+
+.project-modal__close {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border, rgba(255, 255, 255, 0.15));
+  color: var(--color-text-primary, #fff);
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.project-modal__close:hover {
+  background: rgba(255, 77, 77, 0.2);
+  color: #ff4d4d;
+  border-color: rgba(255, 77, 77, 0.4);
+}
+
+.project-modal__body {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  background: #050505;
+}
+
+.project-modal__iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ffffff;
+}
+
+.project-modal__loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--color-surface-01, #0d0d0d);
+  color: var(--color-volt, #CCFF00);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.875rem;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.project-modal__spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(204, 255, 0, 0.2);
+  border-top-color: var(--color-volt, #CCFF00);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .project-modal {
+    padding: 0.5rem;
+  }
+  .project-modal__container {
+    height: 96vh;
+    border-radius: 12px;
+  }
+  .project-modal__header {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .project-modal__badge {
+    display: none;
+  }
+}

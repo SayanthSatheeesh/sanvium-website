@@ -1,0 +1,9 @@
+{
+  "name": "sanvium-technologies",
+  "version": "1.0.0",
+  "description": "Sanvium Technologies Website",
+  "scripts": {
+    "dev": "npx serve webpage"
+  },
+  "dependencies": {}
+}

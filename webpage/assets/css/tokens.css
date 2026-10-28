@@ -1,0 +1,87 @@
+:root {
+  /* Colors - High-Tech Electric Yellow & Obsidian Black Palette */
+  --color-void: #080808;
+  --color-surface-01: #101216;
+  --color-surface-02: #16181F;
+  --color-surface-03: #1F222B;
+  --color-surface-elevated: #262A35;
+  
+  /* Primary Electric Yellow Tokens */
+  --color-volt: #FFE500;
+  --color-volt-hover: #FFF04D;
+  --color-volt-dim: rgba(255, 229, 0, 0.16);
+  --color-volt-glow: rgba(255, 229, 0, 0.08);
+  --color-volt-subtle: rgba(255, 229, 0, 0.04);
+  
+  /* Neutral / Silver Accents */
+  --color-silver: #D4D4D8;
+  --color-silver-dim: rgba(212, 212, 216, 0.2);
+  --color-text-primary: #FAFAFA;
+  --color-text-secondary: #A1A1AA;
+  --color-text-muted: #52525B;
+  --color-text-inverse: #080808;
+  
+  /* Borders */
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-border-accent: rgba(255, 229, 0, 0.48);
+  --color-border-bright: #FFE500;
+  
+  /* Status Colors */
+  --color-success: #22C55E;
+  --color-warning: #FFE500;
+  --color-error: #EF4444;
+
+  /* Fonts */
+  --font-heading: 'Cabinet Grotesk', 'Space Grotesk', sans-serif;
+  --font-body: 'Space Grotesk', 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Typography Scale - Full Viewport Impact */
+  --fs-display: clamp(4.25rem, 9.5vw, 7.75rem);
+  --fs-h1: clamp(3rem, 5.5vw, 4.75rem);
+  --fs-h2: clamp(2.25rem, 4vw, 3.25rem);
+  --fs-h3: clamp(1.5rem, 2.5vw, 2.25rem);
+  --fs-body-lg: 1.25rem;
+  --fs-body: 1.0625rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+
+  /* Line Heights */
+  --lh-tight: 1.0;
+  --lh-snug: 1.2;
+  --lh-normal: 1.55;
+
+  /* Letter Spacing */
+  --ls-wide: 0.12em;
+  --ls-wider: 0.2em;
+
+  /* Spacing */
+  --space-1: 4px;   --space-2: 8px;   --space-3: 12px;
+  --space-4: 16px;  --space-5: 20px;  --space-6: 24px;
+  --space-8: 32px;  --space-10: 40px; --space-12: 48px;
+  --space-16: 56px; --space-20: 64px; --space-24: 80px;
+  --space-32: 96px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-reveal: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Z-Index */
+  --z-base: 1;
+  --z-dock: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+
+  /* Container */
+  --container-max: 1280px;
+  --container-padding: clamp(1.25rem, 5vw, 4rem);
+}

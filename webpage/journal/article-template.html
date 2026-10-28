@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Building a Design System from Zero: Lessons from 50+ Projects">
+  <title>Building a Design System from Zero | Sanvium Technologies</title>
+  <link rel="canonical" href="https://sanviumtechnologies.com/journal/building-a-design-system-from-zero/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Building a Design System from Zero | Sanvium Technologies">
+  <meta property="og:description" content="The difference between a UI kit and a design system is philosophy.">
+  <meta property="og:image" content="/assets/images/blog/article-hero.webp">
+  <meta property="og:url" content="https://sanviumtechnologies.com/journal/building-a-design-system-from-zero/">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components/nav-dock.css">
+  <link rel="stylesheet" href="/assets/css/components/nav-overlay.css">
+  <link rel="stylesheet" href="/assets/css/components/footer.css">
+  <link rel="stylesheet" href="/assets/css/pages/journal.css">
+</head>
+<body class="page-article">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Bottom Nav Dock -->
+  <nav class="nav-dock" role="navigation" aria-label="Primary navigation">
+    <button class="nav-dock__menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="Open navigation menu">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Menu</span>
+    </button>
+    <a class="nav-dock__logo" href="/" aria-label="Sanvium Technologies - Home">
+      <span class="logo-text">Sanvium.</span>
+    </a>
+    <a class="nav-dock__cta" href="/connect/">Contact Us</a>
+  </nav>
+
+  <!-- Nav Overlay -->
+  <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Site navigation" hidden>
+    <div class="nav-overlay__grid">
+      <a class="nav-overlay__item" href="/">HOME</a>
+      <a class="nav-overlay__item" href="/studio/">STUDIO</a>
+      <a class="nav-overlay__item" href="/capabilities/">CAPABILITIES</a>
+      <a class="nav-overlay__item" href="/portfolio/">PORTFOLIO</a>
+      <a class="nav-overlay__item" href="/journal/">JOURNAL</a>
+      <a class="nav-overlay__item" href="/connect/">CONNECT</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <header class="article-header">
+      <div class="container article-header__container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/journal/">Journal</a></li>
+            <li aria-current="page">Building a Design System from Zero</li>
+          </ol>
+        </nav>
+        <span class="label" id="article-category">DESIGN SYSTEMS</span>
+        <h1 class="article-header__title">Building a Design System from Zero: Lessons from 50+ Projects</h1>
+        <div class="article-header__meta">
+          <div class="article-header__author">
+            <img src="/assets/images/team/author.webp" alt="Alex Mercer" width="40" height="40" class="article-header__avatar">
+            <div>
+              <strong>Alex Mercer</strong>
+              <span>Creative Director</span>
+            </div>
+          </div>
+          <div class="article-header__details">
+            <time datetime="2026-07-01">July 1, 2026</time>
+            <span>·</span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="article-hero-image">
+      <div class="container">
+        <img src="/assets/images/blog/featured-placeholder.webp" alt="Design System Interface" width="1200" height="600" loading="eager">
+      </div>
+    </div>
+
+    <article class="article-body" id="article-content">
+      <div class="container article-body__container">
+        <div class="prose">
+          <p>The difference between a UI kit and a design system is philosophy. A UI kit is a collection of components. A design system is a shared language that unifies product teams.</p>
+          
+          <h2>The Foundation of Tokens</h2>
+          <p>Before you draw a single button, you need to define your design tokens. These are the atomic values that make up your visual language: colors, typography scales, spacing units, and border radii.</p>
+          
+          <blockquote>
+            <p>"A robust design system isn't about restricting creativity; it's about removing cognitive load so teams can focus on solving real user problems."</p>
+          </blockquote>
+
+          <p>By defining tokens first, we ensure that when a brand color changes, it updates seamlessly across the entire application ecosystem without manual intervention.</p>
+
+          <h2>Component Hierarchy</h2>
+          <p>We approach components in three tiers:</p>
+          <ol>
+              <li><strong>Atoms:</strong> Buttons, inputs, icons.</li>
+              <li><strong>Molecules:</strong> Search bars, form groups, cards.</li>
+              <li><strong>Organisms:</strong> Navigation bars, complex data tables, hero sections.</li>
+          </ol>
+          
+          <h3>Example: The Button Component</h3>
+          <p>Consider the humble button. It needs states for hover, active, focus (visible), and disabled. It needs variants for primary, secondary, and ghost. It requires sizing logic.</p>
+          
+          <pre><code>.btn {
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-family: var(--font-primary);
+}</code></pre>
+        </div>
+      </div>
+    </article>
+
+    <aside class="author-bio" aria-label="About the author">
+      <div class="container">
+        <div class="author-bio__card">
+          <img src="/assets/images/team/author.webp" alt="Alex Mercer" width="80" height="80">
+          <div>
+            <h3 class="author-bio__name">Alex Mercer</h3>
+            <p class="author-bio__role">Creative Director</p>
+            <p class="author-bio__bio">Alex leads creative vision at Sanvium Technologies, with 10+ years designing for global brands across technology, fashion, and real estate.</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="section related-articles" aria-label="Related articles">
+      <div class="container">
+        <h2 data-animate>MORE FROM THE JOURNAL</h2>
+        <div class="article-grid__items">
+          <!-- 3 article cards -->
+          <article class="article-card" data-animate>
+            <a href="/journal/placeholder-slug/" class="article-card__link">
+              <div class="article-card__image-wrap">
+                <img src="/assets/images/projects/project-placeholder.webp" alt="Placeholder" width="400" height="250" loading="lazy">
+              </div>
+              <div class="article-card__body">
+                <span class="label">DIGITAL ENGINEERING</span>
+                <h3 class="article-card__title">The Future of Headless Commerce</h3>
+                <p class="article-card__excerpt">Why decoupling your frontend and backend is no longer optional for high-growth brands.</p>
+                <div class="article-card__meta">
+                  <time datetime="2026-06-15">June 15, 2026</time>
+                  <span>5 min read</span>
+                </div>
+              </div>
+            </a>
+          </article>
+           <article class="article-card" data-animate>
+            <a href="/journal/placeholder-slug/" class="article-card__link">
+              <div class="article-card__image-wrap">
+                <img src="/assets/images/projects/project-placeholder.webp" alt="Placeholder" width="400" height="250" loading="lazy">
+              </div>
+              <div class="article-card__body">
+                <span class="label">BRAND STRATEGY</span>
+                <h3 class="article-card__title">Minimalism is Dead. Long Live Clarity.</h3>
+                <p class="article-card__excerpt">How brands are moving past brutalist minimalism to find authentic, expressive identities.</p>
+                <div class="article-card__meta">
+                  <time datetime="2026-06-02">June 2, 2026</time>
+                  <span>6 min read</span>
+                </div>
+              </div>
+            </a>
+          </article>
+           <article class="article-card" data-animate>
+            <a href="/journal/placeholder-slug/" class="article-card__link">
+              <div class="article-card__image-wrap">
+                <img src="/assets/images/projects/project-placeholder.webp" alt="Placeholder" width="400" height="250" loading="lazy">
+              </div>
+              <div class="article-card__body">
+                <span class="label">UX/UI</span>
+                <h3 class="article-card__title">Designing for Accessibility in 2026</h3>
+                <p class="article-card__excerpt">Accessibility is not an afterthought, it's the foundation of modern interface design.</p>
+                <div class="article-card__meta">
+                  <time datetime="2026-05-20">May 20, 2026</time>
+                  <span>4 min read</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; <span id="year"></span> Sanvium Technologies. All rights reserved.</p>
+        <nav class="footer__legal" aria-label="Legal navigation">
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms-of-service/">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/main.js" type="module" defer></script>
+</body>
+</html>

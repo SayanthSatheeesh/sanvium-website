@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sanvium Technologies is a full-service creative agency specializing in brand architecture, digital engineering, and spatial design.">
+  <title>Where Vision Meets Velocity | Sanvium Technologies</title>
+  <link rel="canonical" href="https://sanviumtechnologies.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#080808">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Where Vision Meets Velocity | Sanvium Technologies">
+  <meta property="og:description" content="Sanvium Technologies is a full-service creative agency specializing in brand architecture, digital engineering, and spatial design.">
+  <meta property="og:image" content="https://sanviumtechnologies.com/assets/images/og/home.jpg">
+  <meta property="og:url" content="https://sanviumtechnologies.com/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@sanviumtech">
+  <meta name="twitter:title" content="Where Vision Meets Velocity | Sanvium Technologies">
+  <meta name="twitter:description" content="Sanvium Technologies is a full-service creative agency specializing in brand architecture, digital engineering, and spatial design.">
+  <meta name="twitter:image" content="https://sanviumtechnologies.com/assets/images/og/home.jpg">
+
+  <!-- Preconnect External Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.fontshare.com">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components/nav-dock.css">
+  <link rel="stylesheet" href="/assets/css/components/nav-overlay.css">
+  <link rel="stylesheet" href="/assets/css/components/cursor-spotlight.css">
+  <link rel="stylesheet" href="/assets/css/components/split-text.css">
+  <link rel="stylesheet" href="/assets/css/components/loco-scroll.css">
+  <link rel="stylesheet" href="/assets/css/components/lets-scroll-world.css">
+  <link rel="stylesheet" href="/assets/css/components/project-card-iframe.css">
+  <link rel="stylesheet" href="/assets/css/components/footer.css">
+  <link rel="stylesheet" href="/assets/css/pages/home.css">
+
+  <!-- GSAP & Locomotive Scroll CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js" defer></script>
+</head>
+<body class="page-home">
+  <!-- FIRST ELEMENT: Skip link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Bottom Nav Dock -->
+  <nav class="nav-dock" role="navigation" aria-label="Primary navigation">
+    <button class="nav-dock__menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="Open navigation menu">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Menu</span>
+    </button>
+    <a class="nav-dock__logo" href="/" aria-label="Sanvium Technologies - Home">
+      <span class="logo-text">Sanvium.</span>
+    </a>
+    <div class="nav-dock__status">
+      <span class="nav-dock__status-dot" aria-hidden="true"></span>
+      <span>AVAILABLE FOR Q4</span>
+    </div>
+    <a class="nav-dock__cta" href="/connect/">Contact Us</a>
+  </nav>
+
+  <!-- Nav Overlay (Asymmetrical Split Drawer) -->
+  <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Site navigation" hidden>
+    <div class="nav-overlay__wrapper">
+      <nav class="nav-overlay__nav">
+        <a class="nav-overlay__item" href="/">
+          <span class="nav-overlay__num">01</span>
+          <span class="nav-overlay__title">HOME</span>
+        </a>
+        <a class="nav-overlay__item" href="/studio/">
+          <span class="nav-overlay__num">02</span>
+          <span class="nav-overlay__title">STUDIO</span>
+        </a>
+        <a class="nav-overlay__item" href="/capabilities/">
+          <span class="nav-overlay__num">03</span>
+          <span class="nav-overlay__title">CAPABILITIES</span>
+        </a>
+        <a class="nav-overlay__item" href="/portfolio/">
+          <span class="nav-overlay__num">04</span>
+          <span class="nav-overlay__title">PORTFOLIO</span>
+        </a>
+        <a class="nav-overlay__item" href="/journal/">
+          <span class="nav-overlay__num">05</span>
+          <span class="nav-overlay__title">JOURNAL</span>
+        </a>
+        <a class="nav-overlay__item" href="/connect/">
+          <span class="nav-overlay__num">06</span>
+          <span class="nav-overlay__title">CONNECT</span>
+        </a>
+      </nav>
+
+      <div class="nav-overlay__meta">
+        <div class="nav-overlay__meta-badge">
+          <span class="nav-dock__status-dot"></span>
+          <span>AVAILABLE FOR SELECT PROJECTS</span>
+        </div>
+        <div class="nav-overlay__meta-title">ACCELERATING DIGITAL EXPERIENCES</div>
+        <div>
+          <p class="label" style="margin-bottom: 4px;">GET IN TOUCH</p>
+          <a class="nav-overlay__meta-link" href="mailto:hello@sanviumtechnologies.com">hello@sanviumtechnologies.com</a>
+        </div>
+        <div>
+          <p class="label" style="margin-bottom: 4px;">STUDIO LOCATION</p>
+          <p style="color: var(--color-silver); font-size: 0.875rem; margin: 0;">GLOBAL / REMOTE (UTC+5:30)</p>
+        </div>
+        <div class="nav-overlay__socials">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="nav-overlay__social-link">LN</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="nav-overlay__social-link">IG</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="nav-overlay__social-link">X</a>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="nav-overlay__social-link">BE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Container for Locomotive Inertia -->
+  <div data-scroll-container id="scroll-container">
+    <!-- Main Content -->
+    <main id="main-content">
+      <section class="section hero" id="hero" data-scroll-section>
+        <div class="container hero__container">
+          <div class="hero__content" data-scroll data-scroll-speed="0.4">
+            <p class="hero__eyebrow label" data-animate data-delay="1">
+              <span class="nav-dock__status-dot" aria-hidden="true"></span>
+              WEB DESIGN &amp; DEVELOPMENT STUDIO
+            </p>
+            <h1 class="hero__headline" data-split="lines">
+              <span class="hero__line">WE BUILD</span>
+              <span class="hero__line hero__line--accent">DIGITAL</span>
+              <span class="hero__line">FLAGSHIPS</span>
+            </h1>
+            <p class="hero__subtitle" data-animate data-delay="3">
+              Custom websites and web apps for institutions and growing brands, from first sketch to launch and beyond.
+            </p>
+            <div class="hero__actions" data-animate data-delay="4">
+              <a href="/portfolio/" class="btn btn--primary">Explore Our Work</a>
+              <a href="/connect/" class="btn btn--ghost">Start a Project</a>
+            </div>
+            <dl class="hero__stats" data-animate data-delay="5">
+              <div class="hero__stat">
+                <dt class="hero__stat-label">Projects Delivered</dt>
+                <dd class="hero__stat-value"><span class="hero__stat-num" data-count="380">0</span>+</dd>
+              </div>
+              <div class="hero__stat">
+                <dt class="hero__stat-label">Client Satisfaction</dt>
+                <dd class="hero__stat-value"><span class="hero__stat-num" data-count="98">0</span>%</dd>
+              </div>
+              <div class="hero__stat">
+                <dt class="hero__stat-label">Expert Team Members</dt>
+                <dd class="hero__stat-value"><span class="hero__stat-num" data-count="12">0</span></dd>
+              </div>
+            </dl>
+          </div>
+          <!-- 2.5D hero scene: Volt floating in a field of stars (animated by hero-scene.js) -->
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero-scene" id="hero-scene">
+              <div class="hero__glow"></div>
+
+              <svg class="hero-scene__stars" viewBox="0 0 1000 1100" preserveAspectRatio="xMidYMid slice">
+                <g fill="#FFE500">
+                  <circle cx="90" cy="140" r="2.4" opacity="0.6"/><circle cx="260" cy="70" r="1.8" opacity="0.5"/>
+                  <circle cx="820" cy="120" r="2.6" opacity="0.7"/><circle cx="940" cy="300" r="1.8" opacity="0.5"/>
+                  <circle cx="700" cy="230" r="1.6" opacity="0.4"/><circle cx="160" cy="380" r="2" opacity="0.5"/>
+                  <circle cx="900" cy="520" r="2.2" opacity="0.6"/><circle cx="60" cy="600" r="1.6" opacity="0.4"/>
+                  <circle cx="480" cy="110" r="1.8" opacity="0.5"/><circle cx="960" cy="700" r="1.6" opacity="0.4"/>
+                  <circle cx="340" cy="260" r="1.4" opacity="0.4"/><circle cx="620" cy="40" r="1.6" opacity="0.5"/>
+                </g>
+              </svg>
+
+
+              <div class="hero-scene__bot">
+                <div class="hero-bot__rise">
+                  <div class="hero-bot">
+                    <span class="hero-bot__beam"></span>
+                    <img class="hero-bot__arm" src="/assets/images/hero/volt-arm.webp" alt="" width="960" height="1000">
+                    <img class="hero-bot__body" src="/assets/images/hero/volt-body.webp" alt="" width="960" height="1000">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- lets-scroll: Fly-Through Studio World Experience -->
+      <section class="agency-world-section" id="agency-world" data-scroll-section>
+        <div class="world-container" id="world-track">
+          <div class="world-sticky">
+            <canvas class="world-canvas"></canvas>
+
+            <!-- World HUD Overlay -->
+            <div class="world-hud">
+              <div class="world-hud__badge">
+                <span class="world-hud__dot"></span>
+                <span>STUDIO FLIGHT // SCENE <span id="world-scene-index">01 / 05</span></span>
+              </div>
+              <div class="world-hud__controls">
+                <span class="world-hud__hint">SCROLL TO FLY // CLICK RAIL TO JUMP</span>
+              </div>
+            </div>
+
+            <!-- Route Rail -->
+            <nav class="world-rail" aria-label="World scene navigation">
+              <button class="world-rail__step is-active" aria-label="Scene 1: Studio Entrance">
+                <span class="world-rail__indicator"></span>
+                <span class="world-rail__label">01 // ENTRANCE</span>
+              </button>
+              <button class="world-rail__step" aria-label="Scene 2: Architecture Lab">
+                <span class="world-rail__indicator"></span>
+                <span class="world-rail__label">02 // ARCHITECTURE</span>
+              </button>
+              <button class="world-rail__step" aria-label="Scene 3: Code Core">
+                <span class="world-rail__indicator"></span>
+                <span class="world-rail__label">03 // ENGINEERING</span>
+              </button>
+              <button class="world-rail__step" aria-label="Scene 4: Spatial Realm">
+                <span class="world-rail__indicator"></span>
+                <span class="world-rail__label">04 // SPATIAL 3D</span>
+              </button>
+              <button class="world-rail__step" aria-label="Scene 5: Launchpad">
+                <span class="world-rail__indicator"></span>
+                <span class="world-rail__label">05 // LAUNCHPAD</span>
+              </button>
+            </nav>
+
+            <!-- Pinned Narrative Scene Cards -->
+            <div class="world-scenes">
+              <!-- Scene 1 -->
+              <article class="world-card is-visible" data-scene="0">
+                <span class="world-card__num">SCENE 01 // SANCTUARY</span>
+                <h3 class="world-card__title">WHERE VISION MEETS VELOCITY</h3>
+                <p class="world-card__desc">Step inside our creative laboratory where ambitious ideas transform into iconic digital landmarks. We engineer high-velocity experiences for category leaders.</p>
+                <div class="world-card__tags">
+                  <span class="world-card__tag">Full-Service Studio</span>
+                  <span class="world-card__tag">Global Remote</span>
+                  <span class="world-card__tag">High-Motion UX</span>
+                </div>
+              </article>
+
+              <!-- Scene 2 -->
+              <article class="world-card" data-scene="1">
+                <span class="world-card__num">SCENE 02 // LAB</span>
+                <h3 class="world-card__title">BRAND ARCHITECTURE</h3>
+                <p class="world-card__desc">Forging distinct, timeless identities from foundational strategy to bespoke typographic systems, design tokens, and comprehensive design systems.</p>
+                <div class="world-card__tags">
+                  <span class="world-card__tag">Identity Systems</span>
+                  <span class="world-card__tag">Design Tokens</span>
+                  <span class="world-card__tag">Brand Strategy</span>
+                </div>
+              </article>
+
+              <!-- Scene 3 -->
+              <article class="world-card" data-scene="2">
+                <span class="world-card__num">SCENE 03 // CORE</span>
+                <h3 class="world-card__title">DIGITAL ENGINEERING</h3>
+                <p class="world-card__desc">Precision-crafted web & mobile architectures engineered for speed, sub-second latency, accessibility, and frictionless user conversion.</p>
+                <div class="world-card__tags">
+                  <span class="world-card__tag">Modern Fullstack</span>
+                  <span class="world-card__tag">Zero-Latency APIs</span>
+                  <span class="world-card__tag">Scalable Cloud</span>
+                </div>
+              </article>
+
+              <!-- Scene 4 -->
+              <article class="world-card" data-scene="3">
+                <span class="world-card__num">SCENE 04 // REALM</span>
+                <h3 class="world-card__title">SPATIAL & MOTION</h3>
+                <p class="world-card__desc">Interactive WebGL environments, 3D physics simulations, and cinematic micro-interactions that elevate digital spaces into unforgettable interactive art.</p>
+                <div class="world-card__tags">
+                  <span class="world-card__tag">Three.js & WebGL</span>
+                  <span class="world-card__tag">GSAP Motion</span>
+                  <span class="world-card__tag">Spatial Canvas</span>
+                </div>
+              </article>
+
+              <!-- Scene 5 -->
+              <article class="world-card" data-scene="4">
+                <span class="world-card__num">SCENE 05 // LAUNCHPAD</span>
+                <h3 class="world-card__title">GLOBAL IMPACT & ROI</h3>
+                <p class="world-card__desc">Over 380+ projects deployed across higher education, luxury hospitality, and high-growth SaaS with 98% client satisfaction rate.</p>
+                <div class="world-card__tags">
+                  <span class="world-card__tag">380+ Delivered</span>
+                  <span class="world-card__tag">98% Satisfaction</span>
+                  <span class="world-card__tag">Live Support</span>
+                </div>
+              </article>
+            </div>
+
+            <!-- Scene Progress Bar -->
+            <div class="world-progress">
+              <div class="world-progress__bar is-running"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- What We Craft: stacked card deck (flipped by scroll on desktop, swipe/buttons on touch) -->
+      <section class="craft" id="what-we-offer" aria-label="What we craft" data-scroll-section>
+        <div class="craft__track" id="craft-track">
+          <div class="craft__sticky">
+            <div class="container craft__layout">
+              <div class="craft__intro">
+                <p class="label">04 DISCIPLINES // ONE TEAM</p>
+                <h2 class="section__title" data-split>WHAT WE CRAFT</h2>
+                <p class="craft__lede">From the first brand mark to the final line of code, every layer of your digital flagship is built in-house.</p>
+                <div class="craft__nav">
+                  <button class="craft__btn" data-craft-prev aria-label="Previous discipline">
+                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <span class="craft__counter" aria-live="polite"><span data-craft-current>01</span> / 04</span>
+                  <button class="craft__btn" data-craft-next aria-label="Next discipline">
+                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                </div>
+                <div class="craft__progress" aria-hidden="true"><span class="craft__progress-bar"></span></div>
+                <p class="craft__hint" aria-hidden="true">SCROLL TO FLIP ↓</p>
+              </div>
+
+              <div class="craft__deck">
+                <article class="craft-card">
+                  <div class="craft-card__top">
+                    <svg class="craft-card__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><circle cx="12" cy="14" r="3"/></svg>
+                    <span class="craft-card__num" aria-hidden="true">01</span>
+                  </div>
+                  <h3 class="craft-card__title">Visual Identity</h3>
+                  <p class="craft-card__desc">High-impact brand systems that resonate globally and drive measurable engagement.</p>
+                  <ul class="craft-card__tags">
+                    <li>Logo Systems</li><li>Brand Guidelines</li><li>Typography</li>
+                  </ul>
+                </article>
+                <article class="craft-card">
+                  <div class="craft-card__top">
+                    <svg class="craft-card__icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M11 9l6 2.5-2.5 1-1 2.5z"/></svg>
+                    <span class="craft-card__num" aria-hidden="true">02</span>
+                  </div>
+                  <h3 class="craft-card__title">Precision UX</h3>
+                  <p class="craft-card__desc">Interfaces engineered for clarity and engagement, delivering frictionless user journeys.</p>
+                  <ul class="craft-card__tags">
+                    <li>User Research</li><li>Wireframes</li><li>Design Systems</li>
+                  </ul>
+                </article>
+                <article class="craft-card">
+                  <div class="craft-card__top">
+                    <svg class="craft-card__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+                    <span class="craft-card__num" aria-hidden="true">03</span>
+                  </div>
+                  <h3 class="craft-card__title">Digital Engineering</h3>
+                  <p class="craft-card__desc">Web and mobile solutions built to scale, with robust architecture and clean code.</p>
+                  <ul class="craft-card__tags">
+                    <li>Web Apps</li><li>Headless CMS</li><li>Performance</li>
+                  </ul>
+                </article>
+                <article class="craft-card">
+                  <div class="craft-card__top">
+                    <svg class="craft-card__icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg>
+                    <span class="craft-card__num" aria-hidden="true">04</span>
+                  </div>
+                  <h3 class="craft-card__title">Visual Storytelling</h3>
+                  <p class="craft-card__desc">Cinematic content and strategic narratives that captivate audiences and elevate brands.</p>
+                  <ul class="craft-card__tags">
+                    <li>Motion Design</li><li>Art Direction</li><li>Content Strategy</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services" data-scroll-section>
+        <div class="container">
+          <div class="services__header">
+            <h2 class="services__title" data-split>Capabilities</h2>
+            <p class="services__desc" data-animate>Explore our portfolio of work and discover what we build.</p>
+          </div>
+          <ol class="services__list">
+            <li class="services__item" data-animate>
+              <span class="services__num">01</span>
+              <h3 class="services__name">Digital Engineering</h3>
+              <a href="/capabilities/#digital-engineering" class="services__arrow" aria-label="Learn more about Digital Engineering">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19L19 5M19 5v10M19 5H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </li>
+            <li class="services__item" data-animate>
+              <span class="services__num">02</span>
+              <h3 class="services__name">Brand Architecture</h3>
+              <a href="/capabilities/#brand-architecture" class="services__arrow" aria-label="Learn more about Brand Architecture">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19L19 5M19 5v10M19 5H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </li>
+            <li class="services__item" data-animate>
+              <span class="services__num">03</span>
+              <h3 class="services__name">UX/UI Systems</h3>
+              <a href="/capabilities/#ux-ui-systems" class="services__arrow" aria-label="Learn more about UX/UI Systems">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19L19 5M19 5v10M19 5H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </li>
+            <li class="services__item" data-animate>
+              <span class="services__num">04</span>
+              <h3 class="services__name">Motion & Storytelling</h3>
+              <a href="/capabilities/#motion-storytelling" class="services__arrow" aria-label="Learn more about Motion & Storytelling">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19L19 5M19 5v10M19 5H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </li>
+            <li class="services__item" data-animate>
+              <span class="services__num">05</span>
+              <h3 class="services__name">Spatial Design</h3>
+              <a href="/capabilities/#spatial-design" class="services__arrow" aria-label="Learn more about Spatial Design">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19L19 5M19 5v10M19 5H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section featured-projects" id="featured-projects" data-scroll-section>
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="label" data-animate style="margin-bottom: 8px;">CURATED WORK</p>
+              <h2 class="section__title" data-split style="margin-bottom: 0;">FEATURED PROJECTS</h2>
+            </div>
+            <a href="/portfolio/" class="btn btn--outline" data-animate>VIEW ALL WORK →</a>
+          </div>
+        <div class="projects-grid">
+          <article class="project-card project-card--large" data-spotlight data-animate>
+            <div class="project-card__link">
+              <div class="project-card__iframe-wrap">
+                <img class="project-card__thumbnail project-card__thumbnail--scroll" src="/assets/images/projects/lead-college.webp" alt="Lead College Of Management website homepage" loading="lazy" width="1440" height="2100">
+                <span class="project-card__badge">EDUCATION &amp; ACADEMICS</span>
+                <div class="project-card__overlay-trigger project-card__overlay-trigger--actions">
+                  <a class="project-card__action project-card__action--primary" href="https://www.lead.ac.in/" target="_blank" rel="noopener noreferrer">
+                    Visit live site
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                  </a>
+                  <button type="button" class="project-card__action" data-project-url="https://www.lead.ac.in/" data-project-title="LEAD COLLEGE OF MANAGEMENT" data-project-badge="EDUCATION &amp; ACADEMICS">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Quick preview
+                  </button>
+                </div>
+              </div>
+              <div class="project-card__details">
+                <div class="project-card__header">
+                  <h3 class="project-card__name">LEAD COLLEGE OF MANAGEMENT</h3>
+                  <span class="project-card__year">2026</span>
+                </div>
+                <p class="project-card__sub">Premier management institute platform featuring campus showcases, academic programs, and admissions.</p>
+                <a class="project-card__domain" href="https://www.lead.ac.in/" target="_blank" rel="noopener noreferrer">
+                  <span class="project-card__domain-dot" aria-hidden="true"></span>
+                  lead.ac.in
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-spotlight data-animate data-delay="1">
+            <div class="project-card__link">
+              <div class="project-card__iframe-wrap">
+                <img class="project-card__thumbnail project-card__thumbnail--scroll" src="/assets/images/projects/st-thomas-college.webp" alt="St. Thomas College Konni website homepage" loading="lazy" width="1440" height="3200">
+                <span class="project-card__badge">HIGHER EDUCATION</span>
+                <div class="project-card__overlay-trigger project-card__overlay-trigger--actions">
+                  <a class="project-card__action project-card__action--primary" href="https://www.stthomascollegekonni.com/" target="_blank" rel="noopener noreferrer">
+                    Visit live site
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project-card__details">
+                <div class="project-card__header">
+                  <h3 class="project-card__name">ST. THOMAS COLLEGE KONNI</h3>
+                  <span class="project-card__year">2026</span>
+                </div>
+                <p class="project-card__sub">Comprehensive higher education portal showcasing academic departments and student portals.</p>
+                <a class="project-card__domain" href="https://www.stthomascollegekonni.com/" target="_blank" rel="noopener noreferrer">
+                  <span class="project-card__domain-dot" aria-hidden="true"></span>
+                  stthomascollegekonni.com
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-spotlight data-animate data-delay="1">
+            <div class="project-card__link">
+              <div class="project-card__iframe-wrap">
+                <img class="project-card__thumbnail project-card__thumbnail--scroll" src="/assets/images/projects/aanshi-organic.webp" alt="Aanshi Organic website homepage" loading="lazy" width="1440" height="3200">
+                <span class="project-card__badge">E-COMMERCE &amp; WELLNESS</span>
+                <div class="project-card__overlay-trigger project-card__overlay-trigger--actions">
+                  <a class="project-card__action project-card__action--primary" href="https://aanshiorganic.com/" target="_blank" rel="noopener noreferrer">
+                    Visit live site
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                  </a>
+                  <button type="button" class="project-card__action" data-project-url="https://aanshiorganic.com/" data-project-title="AANSHI ORGANIC" data-project-badge="E-COMMERCE &amp; WELLNESS">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Quick preview
+                  </button>
+                </div>
+              </div>
+              <div class="project-card__details">
+                <div class="project-card__header">
+                  <h3 class="project-card__name">AANSHI ORGANIC</h3>
+                  <span class="project-card__year">2026</span>
+                </div>
+                <p class="project-card__sub">Sustainable organic &amp; natural wellness product e-commerce brand platform.</p>
+                <a class="project-card__domain" href="https://aanshiorganic.com/" target="_blank" rel="noopener noreferrer">
+                  <span class="project-card__domain-dot" aria-hidden="true"></span>
+                  aanshiorganic.com
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--large" data-spotlight data-animate data-delay="2">
+            <div class="project-card__link">
+              <div class="project-card__iframe-wrap">
+                <img class="project-card__thumbnail project-card__thumbnail--scroll" src="/assets/images/projects/arica-wellness.webp" alt="Arica Wellness website homepage" loading="lazy" width="1440" height="3200">
+                <span class="project-card__badge">HEALTH &amp; WELLNESS</span>
+                <div class="project-card__overlay-trigger project-card__overlay-trigger--actions">
+                  <a class="project-card__action project-card__action--primary" href="https://aricawellness.in/" target="_blank" rel="noopener noreferrer">
+                    Visit live site
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project-card__details">
+                <div class="project-card__header">
+                  <h3 class="project-card__name">ARICA WELLNESS</h3>
+                  <span class="project-card__year">2026</span>
+                </div>
+                <p class="project-card__sub">Modern holistic health &amp; wellness service portal and booking experience.</p>
+                <a class="project-card__domain" href="https://aricawellness.in/" target="_blank" rel="noopener noreferrer">
+                  <span class="project-card__domain-dot" aria-hidden="true"></span>
+                  aricawellness.in
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--large" data-spotlight data-animate data-delay="1">
+            <div class="project-card__link">
+              <div class="project-card__iframe-wrap">
+                <img class="project-card__thumbnail project-card__thumbnail--scroll" src="/assets/images/projects/campusconnect.webp" alt="Campusconnect website homepage" loading="lazy" width="1440" height="3200">
+                <span class="project-card__badge">WEB APPLICATION</span>
+                <div class="project-card__overlay-trigger project-card__overlay-trigger--actions">
+                  <a class="project-card__action project-card__action--primary" href="https://campusconnect-frontend-beta.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    Visit live site
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                  </a>
+                  <button type="button" class="project-card__action" data-project-url="https://campusconnect-frontend-beta.vercel.app/" data-project-title="CAMPUSCONNECT" data-project-badge="WEB APPLICATION">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Quick preview
+                  </button>
+                </div>
+              </div>
+              <div class="project-card__details">
+                <div class="project-card__header">
+                  <h3 class="project-card__name">CAMPUSCONNECT</h3>
+                  <span class="project-card__year">2026</span>
+                </div>
+                <p class="project-card__sub">Next-generation student community engagement &amp; campus networking application.</p>
+                <a class="project-card__domain" href="https://campusconnect-frontend-beta.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <span class="project-card__domain-dot" aria-hidden="true"></span>
+                  campusconnect-frontend-beta.vercel.app
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-spotlight data-animate data-delay="2">
+            <div class="project-card__link">
+              <div class="project-card__iframe-wrap">
+                <img class="project-card__thumbnail project-card__thumbnail--scroll" src="/assets/images/projects/orange-spa.webp" alt="Orange Spa Nagpur website homepage" loading="lazy" width="1440" height="3200">
+                <span class="project-card__badge">SPA &amp; HOSPITALITY</span>
+                <div class="project-card__overlay-trigger project-card__overlay-trigger--actions">
+                  <a class="project-card__action project-card__action--primary" href="https://www.orangespanagpur.in/" target="_blank" rel="noopener noreferrer">
+                    Visit live site
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                  </a>
+                  <button type="button" class="project-card__action" data-project-url="https://www.orangespanagpur.in/" data-project-title="ORANGE SPA NAGPUR" data-project-badge="SPA &amp; HOSPITALITY">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Quick preview
+                  </button>
+                </div>
+              </div>
+              <div class="project-card__details">
+                <div class="project-card__header">
+                  <h3 class="project-card__name">ORANGE SPA NAGPUR</h3>
+                  <span class="project-card__year">2026</span>
+                </div>
+                <p class="project-card__sub">Luxury spa, therapy, and hospitality booking web experience.</p>
+                <a class="project-card__domain" href="https://www.orangespanagpur.in/" target="_blank" rel="noopener noreferrer">
+                  <span class="project-card__domain-dot" aria-hidden="true"></span>
+                  orangespanagpur.in
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats" aria-label="Our metrics" data-scroll-section>
+      <div class="container">
+        <div class="stats-card">
+          <div class="stats-card__item">
+            <span class="stats-card__number" data-count="380">0</span>
+            <span class="stats-card__label">Projects Delivered</span>
+          </div>
+          <div class="stats-card__item">
+            <span class="stats-card__number" data-count="12">0</span>
+            <span class="stats-card__label">Expert Team Members</span>
+          </div>
+          <div class="stats-card__item">
+            <span class="stats-card__number" data-count="98">0</span>
+            <span class="stats-card__label">Client Satisfaction %</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials" aria-label="Client testimonials" data-scroll-section>
+      <div class="container">
+        <p class="label" data-animate>TESTIMONIALS</p>
+        <div class="testimonials__carousel" role="region" aria-live="polite">
+          <div class="testimonials__card">
+            <blockquote>
+              <p class="testimonials__quote">"Working with Sanvium was a <strong>transformational experience</strong> for our brand. Their attention to detail and design thinking is unmatched."</p>
+              <footer>
+                <cite>
+                  <strong class="testimonials__name">DR. THOMAS GEORGE</strong>
+                  <span class="testimonials__role">CHAIRMAN, LEAD GROUP OF INSTITUTIONS</span>
+                </cite>
+              </footer>
+            </blockquote>
+          </div>
+           <div class="testimonials__card" style="display: none;">
+            <blockquote>
+              <p class="testimonials__quote">"An exceptional team that delivers on their promises. Their digital engineering expertise elevated our platform."</p>
+              <footer>
+                <cite>
+                  <strong class="testimonials__name">NIVED N RAJ</strong>
+                  <span class="testimonials__role">NEST TECHNOLOGIES</span>
+                </cite>
+              </footer>
+            </blockquote>
+          </div>
+           <div class="testimonials__card" style="display: none;">
+            <blockquote>
+              <p class="testimonials__quote">"Sanvium redefined our visual identity. The new design system is flexible, striking, and modern."</p>
+              <footer>
+                <cite>
+                  <strong class="testimonials__name">ELENA ROSTOV</strong>
+                  <span class="testimonials__role">FOUNDER, NOVA DESIGN</span>
+                </cite>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+        <div class="testimonials__controls" role="group" aria-label="Carousel navigation">
+          <button class="testimonials__prev" aria-label="Previous testimonial">←</button>
+          <div class="testimonials__dots" role="list">
+            <button class="testimonials__dot is-active" aria-label="Testimonial 1" aria-pressed="true"></button>
+            <button class="testimonials__dot" aria-label="Testimonial 2" aria-pressed="false"></button>
+            <button class="testimonials__dot" aria-label="Testimonial 3" aria-pressed="false"></button>
+          </div>
+          <button class="testimonials__next" aria-label="Next testimonial">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-banner" aria-label="Call to action" data-scroll-section>
+      <div class="container">
+        <div class="cta-banner__card" data-animate>
+          <p class="label">READY TO BUILD?</p>
+          <h2 class="cta-banner__title">ELEVATE YOUR<br>DIGITAL PRESENCE</h2>
+          <div class="cta-banner__actions">
+            <a href="/connect/" class="btn btn--primary">Start a Project</a>
+            <a href="/portfolio/" class="btn btn--ghost">View Our Work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo" data-scroll-section>
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; <span id="year"></span> Sanvium Technologies. All rights reserved.</p>
+        <nav class="footer__legal" aria-label="Legal navigation">
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms-of-service/">Terms of Service</a>
+        </nav>
+        <div class="footer__social" aria-label="Social media links">
+            <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.556.556.9 1.11 1.152 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772c-.556.556-1.11.9-1.772 1.152-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.152-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm4.25-7.05a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div><!-- /data-scroll-container -->
+
+  <!-- Live Project Preview Modal -->
+  <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Website preview modal">
+    <div class="project-modal__container">
+      <div class="project-modal__header">
+        <div class="project-modal__title-group">
+          <h3 class="project-modal__title">Website Preview</h3>
+          <span class="project-modal__badge">FEATURED</span>
+        </div>
+        <div class="project-modal__controls">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="project-modal__ext-link">
+            <span>Open Direct Site</span>
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+          <button class="project-modal__close" aria-label="Close preview modal">&times;</button>
+        </div>
+      </div>
+      <div class="project-modal__body">
+        <div class="project-modal__loader">
+          <div class="project-modal__spinner"></div>
+          <span>Loading live website preview...</span>
+        </div>
+        <iframe class="project-modal__iframe" src="about:blank" title="Live Website Preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/main.js" type="module" defer></script>
+</body>
+</html>

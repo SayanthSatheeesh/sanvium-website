@@ -1,0 +1,52 @@
+/* Interactive Cursor Glow & Spotlight Borders - Electric Yellow */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 420px;
+  margin-top: -210px;
+  margin-left: -210px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 229, 0, 0.09) 0%, rgba(255, 229, 0, 0.025) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 999;
+  transition: opacity 0.3s ease, transform 0.1s ease-out;
+  opacity: 0;
+}
+
+body.cursor-active .cursor-glow {
+  opacity: 1;
+}
+
+/* Card Spotlight Border Tracking */
+[data-spotlight] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-spotlight]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 229, 0, 0.16),
+    transparent 42%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 2;
+}
+
+[data-spotlight]:hover::before {
+  opacity: 1;
+}
+
+/* Magnetic Button Subtle Movement */
+.btn, .nav-dock__menu, .nav-dock__cta {
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}

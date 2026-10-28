@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sanvium Technologies Journal: Insights on design systems, digital strategy, and creative engineering.">
+  <title>The Journal | Sanvium Technologies</title>
+  <link rel="canonical" href="https://sanviumtechnologies.com/journal/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#080808">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Journal | Sanvium Technologies">
+  <meta property="og:description" content="Insights on design systems, digital strategy, and creative engineering.">
+  <meta property="og:image" content="https://sanviumtechnologies.com/assets/images/og/journal.jpg">
+  <meta property="og:url" content="https://sanviumtechnologies.com/journal/">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components/nav-dock.css">
+  <link rel="stylesheet" href="/assets/css/components/nav-overlay.css">
+  <link rel="stylesheet" href="/assets/css/components/cursor-spotlight.css">
+  <link rel="stylesheet" href="/assets/css/components/split-text.css">
+  <link rel="stylesheet" href="/assets/css/components/loco-scroll.css">
+  <link rel="stylesheet" href="/assets/css/components/footer.css">
+  <link rel="stylesheet" href="/assets/css/pages/journal.css">
+
+  <!-- GSAP & Locomotive Scroll CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js" defer></script>
+</head>
+<body class="page-journal">
+  <!-- FIRST ELEMENT: Skip link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Bottom Nav Dock -->
+  <nav class="nav-dock" role="navigation" aria-label="Primary navigation">
+    <button class="nav-dock__menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="Open navigation menu">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Menu</span>
+    </button>
+    <a class="nav-dock__logo" href="/" aria-label="Sanvium Technologies - Home">
+      <span class="logo-text">Sanvium.</span>
+    </a>
+    <a class="nav-dock__cta" href="/connect/">Contact Us</a>
+  </nav>
+
+  <!-- Nav Overlay -->
+  <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Site navigation" hidden>
+    <div class="nav-overlay__grid">
+      <a class="nav-overlay__item" href="/">HOME</a>
+      <a class="nav-overlay__item" href="/studio/">STUDIO</a>
+      <a class="nav-overlay__item" href="/capabilities/">CAPABILITIES</a>
+      <a class="nav-overlay__item" href="/portfolio/">PORTFOLIO</a>
+      <a class="nav-overlay__item" href="/journal/">JOURNAL</a>
+      <a class="nav-overlay__item" href="/connect/">CONNECT</a>
+    </div>
+  </div>
+
+  <!-- Scroll Container for Locomotive Inertia -->
+  <div data-scroll-container id="scroll-container">
+    <!-- Main Content -->
+    <main id="main-content">
+      <section class="section page-hero" id="journal-hero" data-scroll-section>
+        <div class="container" data-scroll data-scroll-speed="0.3">
+          <h1 class="page-hero__title" data-split>THE JOURNAL</h1>
+          <p class="page-hero__subtitle" data-animate data-delay="1">
+            Insights on <strong>design systems</strong>,
+            <strong>digital strategy</strong>, and
+            <strong>creative engineering</strong>.
+          </p>
+        </div>
+      </section>
+
+      <section class="section featured-article" id="featured-article" data-scroll-section>
+        <div class="container">
+          <article class="featured-article__card" data-animate data-spotlight>
+            <a href="/journal/building-a-design-system-from-zero/" class="featured-article__link">
+              <div class="featured-article__image-wrap">
+                <img src="/assets/images/blog/featured-placeholder.webp" alt="Building a Design System" width="1200" height="600" loading="lazy">
+              </div>
+              <div class="featured-article__body">
+                <span class="label">DESIGN SYSTEMS</span>
+                <h2 class="featured-article__title">Building a Design System from Zero: Lessons from 50+ Projects</h2>
+                <p class="featured-article__excerpt">The difference between a UI kit and a design system is philosophy. Here's what we've learned after building design systems for brands across 3 continents.</p>
+                <div class="featured-article__meta">
+                  <time datetime="2026-07-01">July 1, 2026</time>
+                  <span>8 min read</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section article-grid" id="article-grid" data-scroll-section>
+        <div class="container">
+          <div class="article-grid__items" id="articles-container">
+            <!-- Static fallback cards here; JS replaces with API data -->
+            <article class="article-card" data-animate data-spotlight>
+              <a href="/journal/placeholder-slug/" class="article-card__link">
+                <div class="article-card__image-wrap">
+                  <img src="/assets/images/projects/project-placeholder.webp" alt="Placeholder" width="400" height="250" loading="lazy">
+                </div>
+                <div class="article-card__body">
+                  <span class="label">DIGITAL ENGINEERING</span>
+                  <h3 class="article-card__title">The Future of Headless Commerce</h3>
+                  <p class="article-card__excerpt">Why decoupling your frontend and backend is no longer optional for high-growth brands.</p>
+                  <div class="article-card__meta">
+                    <time datetime="2026-06-15">June 15, 2026</time>
+                    <span>5 min read</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+            
+             <article class="article-card" data-animate data-spotlight data-delay="1">
+              <a href="/journal/placeholder-slug/" class="article-card__link">
+                <div class="article-card__image-wrap">
+                  <img src="/assets/images/projects/project-placeholder.webp" alt="Placeholder" width="400" height="250" loading="lazy">
+                </div>
+                <div class="article-card__body">
+                  <span class="label">BRAND STRATEGY</span>
+                  <h3 class="article-card__title">Minimalism is Dead. Long Live Clarity.</h3>
+                  <p class="article-card__excerpt">How brands are moving past brutalist minimalism to find authentic, expressive identities.</p>
+                  <div class="article-card__meta">
+                    <time datetime="2026-06-02">June 2, 2026</time>
+                    <span>6 min read</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+             <article class="article-card" data-animate data-spotlight data-delay="2">
+              <a href="/journal/placeholder-slug/" class="article-card__link">
+                <div class="article-card__image-wrap">
+                  <img src="/assets/images/projects/project-placeholder.webp" alt="Placeholder" width="400" height="250" loading="lazy">
+                </div>
+                <div class="article-card__body">
+                  <span class="label">UX/UI</span>
+                  <h3 class="article-card__title">Designing for Accessibility in 2026</h3>
+                  <p class="article-card__excerpt">Accessibility is not an afterthought, it's the foundation of modern interface design.</p>
+                  <div class="article-card__meta">
+                    <time datetime="2026-05-20">May 20, 2026</time>
+                    <span>4 min read</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section newsletter" id="newsletter" data-scroll-section>
+        <div class="container">
+          <div class="newsletter__card" data-animate>
+            <h2 class="newsletter__title" data-split>STAY IN THE LOOP</h2>
+            <p class="newsletter__desc">Monthly insights on design, development, and digital strategy. No spam, ever.</p>
+            <form class="newsletter__form" id="newsletter-form" novalidate>
+              <div class="newsletter__input-group">
+                <label for="newsletter-email" class="visually-hidden">Email address</label>
+                <input type="email" id="newsletter-email" name="email" class="newsletter__input" placeholder="your@email.com" required autocomplete="email" aria-describedby="newsletter-error">
+                <button type="submit" class="btn btn--primary">Subscribe</button>
+              </div>
+              <span class="form-error" id="newsletter-error" role="alert" aria-live="polite" hidden></span>
+              <p class="newsletter__legal">By subscribing you agree to our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__copy">&copy; <span id="year"></span> Sanvium Technologies. All rights reserved.</p>
+          <nav class="footer__legal" aria-label="Legal navigation">
+            <a href="/privacy-policy/">Privacy Policy</a>
+            <a href="/terms-of-service/">Terms of Service</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </div><!-- /data-scroll-container -->
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/main.js" type="module" defer></script></body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse 380+ projects by Sanvium Technologies — websites, brand identities, app interfaces, architectural visualizations, and motion design.">
+  <title>Our Work | Sanvium Technologies</title>
+  <link rel="canonical" href="https://sanviumtechnologies.com/portfolio/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#080808">
+  <!-- Preconnect External Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.fontshare.com">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components/nav-dock.css">
+  <link rel="stylesheet" href="/assets/css/components/nav-overlay.css">
+  <link rel="stylesheet" href="/assets/css/components/cursor-spotlight.css">
+  <link rel="stylesheet" href="/assets/css/components/split-text.css">
+  <link rel="stylesheet" href="/assets/css/components/loco-scroll.css">
+  <link rel="stylesheet" href="/assets/css/components/project-card-iframe.css">
+  <link rel="stylesheet" href="/assets/css/components/footer.css">
+  <link rel="stylesheet" href="/assets/css/pages/portfolio.css">
+
+  <!-- GSAP & Locomotive Scroll CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js" defer></script>
+</head>
+<body class="page-portfolio">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav class="nav-dock" role="navigation" aria-label="Primary navigation">
+    <button class="nav-dock__menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="Open navigation menu">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Menu</span>
+    </button>
+    <a class="nav-dock__logo" href="/" aria-label="Sanvium Technologies - Home">
+      <span class="logo-text">Sanvium.</span>
+    </a>
+    <a class="nav-dock__cta" href="/connect/">Contact Us</a>
+  </nav>
+
+  <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Site navigation" hidden>
+    <div class="nav-overlay__wrapper">
+      <nav class="nav-overlay__nav">
+        <a class="nav-overlay__item" href="/">
+          <span class="nav-overlay__num">01</span>
+          <span class="nav-overlay__title">HOME</span>
+        </a>
+        <a class="nav-overlay__item" href="/studio/">
+          <span class="nav-overlay__num">02</span>
+          <span class="nav-overlay__title">STUDIO</span>
+        </a>
+        <a class="nav-overlay__item" href="/capabilities/">
+          <span class="nav-overlay__num">03</span>
+          <span class="nav-overlay__title">CAPABILITIES</span>
+        </a>
+        <a class="nav-overlay__item" href="/portfolio/">
+          <span class="nav-overlay__num">04</span>
+          <span class="nav-overlay__title">PORTFOLIO</span>
+        </a>
+        <a class="nav-overlay__item" href="/journal/">
+          <span class="nav-overlay__num">05</span>
+          <span class="nav-overlay__title">JOURNAL</span>
+        </a>
+        <a class="nav-overlay__item" href="/connect/">
+          <span class="nav-overlay__num">06</span>
+          <span class="nav-overlay__title">CONNECT</span>
+        </a>
+      </nav>
+
+      <div class="nav-overlay__meta">
+        <div class="nav-overlay__meta-badge">
+          <span class="nav-dock__status-dot"></span>
+          <span>AVAILABLE FOR SELECT PROJECTS</span>
+        </div>
+        <div class="nav-overlay__meta-title">ACCELERATING DIGITAL EXPERIENCES</div>
+        <div>
+          <p class="label" style="margin-bottom: 4px;">GET IN TOUCH</p>
+          <a class="nav-overlay__meta-link" href="mailto:hello@sanviumtechnologies.com">hello@sanviumtechnologies.com</a>
+        </div>
+        <div>
+          <p class="label" style="margin-bottom: 4px;">STUDIO LOCATION</p>
+          <p style="color: var(--color-silver); font-size: 0.875rem; margin: 0;">GLOBAL / REMOTE (UTC+5:30)</p>
+        </div>
+        <div class="nav-overlay__socials">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="nav-overlay__social-link">LN</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="nav-overlay__social-link">IG</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="nav-overlay__social-link">X</a>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="nav-overlay__social-link">BE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Container for Locomotive Inertia -->
+  <div data-scroll-container id="scroll-container">
+    <main id="main-content">
+      <section class="section hero" data-scroll-section>
+          <div class="container" data-scroll data-scroll-speed="0.3">
+              <h1 class="hero__headline" data-split>OUR WORK</h1>
+          </div>
+      </section>
+
+      <section class="section portfolio" data-scroll-section>
+        <div class="container">
+            <div class="search-bar" data-animate>
+              <label for="project-search" class="visually-hidden">Search projects</label>
+              <input type="search" id="project-search" class="search-bar__input" placeholder="SEARCH PROJECTS..." autocomplete="off">
+              <svg class="search-bar__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+
+            <div class="filter-pills" role="group" aria-label="Filter projects by category" data-animate>
+              <button class="filter-pill is-active" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-pill" data-filter="websites" aria-pressed="false">Websites</button>
+              <button class="filter-pill" data-filter="academics" aria-pressed="false">Academics</button>
+              <button class="filter-pill" data-filter="e-commerce" aria-pressed="false">E-Commerce</button>
+              <button class="filter-pill" data-filter="wellness" aria-pressed="false">Wellness</button>
+              <button class="filter-pill" data-filter="app-design" aria-pressed="false">App Design</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+              <article class="project-card" data-category="websites academics" data-title="LEAD College of Management" data-animate>
+                <div class="project-card__link" data-project-url="https://www.lead.ac.in/" data-project-title="LEAD COLLEGE OF MANAGEMENT" data-project-badge="EDUCATION & ACADEMICS">
+                  <div class="project-card__iframe-wrap">
+                    <iframe class="project-card__iframe-scale" src="https://www.lead.ac.in/" title="LEAD College of Management live preview" loading="lazy"></iframe>
+                    <span class="project-card__badge">ACADEMICS</span>
+                    <div class="project-card__overlay-trigger">
+                      <span class="project-card__preview-btn">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        Preview Site
+                      </span>
+                    </div>
+                  </div>
+                  <div class="project-card__details">
+                    <div class="project-card__header">
+                      <h3 class="project-card__name">LEAD COLLEGE OF MANAGEMENT</h3>
+                      <span class="project-card__year">2026</span>
+                    </div>
+                    <p class="project-card__sub">Premier management institute platform featuring campus showcases and admissions portal.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card" data-category="websites academics" data-title="St. Thomas College Konni" data-animate>
+                <div class="project-card__link" data-project-url="https://www.stthomascollegekonni.com/" data-project-title="ST. THOMAS COLLEGE KONNI" data-project-badge="HIGHER EDUCATION">
+                  <div class="project-card__iframe-wrap">
+                    <iframe class="project-card__iframe-scale" src="https://www.stthomascollegekonni.com/" title="St. Thomas College Konni live preview" loading="lazy"></iframe>
+                    <span class="project-card__badge">HIGHER EDUCATION</span>
+                    <div class="project-card__overlay-trigger">
+                      <span class="project-card__preview-btn">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        Preview Site
+                      </span>
+                    </div>
+                  </div>
+                  <div class="project-card__details">
+                    <div class="project-card__header">
+                      <h3 class="project-card__name">ST. THOMAS COLLEGE KONNI</h3>
+                      <span class="project-card__year">2026</span>
+                    </div>
+                    <p class="project-card__sub">Academic portal showcasing departments, news, and student resources.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card" data-category="websites e-commerce" data-title="Aanshi Organic" data-animate>
+                <div class="project-card__link" data-project-url="https://aanshiorganic.com/" data-project-title="AANSHI ORGANIC" data-project-badge="E-COMMERCE & WELLNESS">
+                  <div class="project-card__iframe-wrap">
+                    <iframe class="project-card__iframe-scale" src="https://aanshiorganic.com/" title="Aanshi Organic live preview" loading="lazy"></iframe>
+                    <span class="project-card__badge">E-COMMERCE</span>
+                    <div class="project-card__overlay-trigger">
+                      <span class="project-card__preview-btn">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        Preview Site
+                      </span>
+                    </div>
+                  </div>
+                  <div class="project-card__details">
+                    <div class="project-card__header">
+                      <h3 class="project-card__name">AANSHI ORGANIC</h3>
+                      <span class="project-card__year">2026</span>
+                    </div>
+                    <p class="project-card__sub">Sustainable organic & natural wellness product e-commerce brand platform.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card" data-category="websites wellness" data-title="Arica Wellness" data-animate>
+                <div class="project-card__link" data-project-url="https://aricawellness.in/" data-project-title="ARICA WELLNESS" data-project-badge="HEALTH & WELLNESS">
+                  <div class="project-card__iframe-wrap">
+                    <iframe class="project-card__iframe-scale" src="https://aricawellness.in/" title="Arica Wellness live preview" loading="lazy"></iframe>
+                    <span class="project-card__badge">WELLNESS</span>
+                    <div class="project-card__overlay-trigger">
+                      <span class="project-card__preview-btn">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        Preview Site
+                      </span>
+                    </div>
+                  </div>
+                  <div class="project-card__details">
+                    <div class="project-card__header">
+                      <h3 class="project-card__name">ARICA WELLNESS</h3>
+                      <span class="project-card__year">2026</span>
+                    </div>
+                    <p class="project-card__sub">Modern holistic health & wellness service portal and booking experience.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card" data-category="app-design web-app" data-title="CampusConnect" data-animate>
+                <div class="project-card__link" data-project-url="https://campusconnect-frontend-beta.vercel.app/" data-project-title="CAMPUSCONNECT" data-project-badge="WEB APPLICATION">
+                  <div class="project-card__iframe-wrap">
+                    <iframe class="project-card__iframe-scale" src="https://campusconnect-frontend-beta.vercel.app/" title="CampusConnect live preview" loading="lazy"></iframe>
+                    <span class="project-card__badge">APP DESIGN</span>
+                    <div class="project-card__overlay-trigger">
+                      <span class="project-card__preview-btn">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        Preview Site
+                      </span>
+                    </div>
+                  </div>
+                  <div class="project-card__details">
+                    <div class="project-card__header">
+                      <h3 class="project-card__name">CAMPUSCONNECT</h3>
+                      <span class="project-card__year">2026</span>
+                    </div>
+                    <p class="project-card__sub">Next-generation student community engagement & campus networking app.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card" data-category="websites wellness" data-title="Orange Spa Nagpur" data-animate>
+                <div class="project-card__link" data-project-url="https://www.orangespanagpur.in/" data-project-title="ORANGE SPA NAGPUR" data-project-badge="SPA & HOSPITALITY">
+                  <div class="project-card__iframe-wrap">
+                    <iframe class="project-card__iframe-scale" src="https://www.orangespanagpur.in/" title="Orange Spa Nagpur live preview" loading="lazy"></iframe>
+                    <span class="project-card__badge">SPA & HOSPITALITY</span>
+                    <div class="project-card__overlay-trigger">
+                      <span class="project-card__preview-btn">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        Preview Site
+                      </span>
+                    </div>
+                  </div>
+                  <div class="project-card__details">
+                    <div class="project-card__header">
+                      <h3 class="project-card__name">ORANGE SPA NAGPUR</h3>
+                      <span class="project-card__year">2026</span>
+                    </div>
+                    <p class="project-card__sub">Luxury spa, therapy, and hospitality booking web experience.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo" data-scroll-section>
+     <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; <span id="year"></span> Sanvium Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  </div><!-- /data-scroll-container -->
+
+  <!-- Live Project Preview Modal -->
+  <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Website preview modal">
+    <div class="project-modal__container">
+      <div class="project-modal__header">
+        <div class="project-modal__title-group">
+          <h3 class="project-modal__title">Website Preview</h3>
+          <span class="project-modal__badge">FEATURED</span>
+        </div>
+        <div class="project-modal__controls">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="project-modal__ext-link">
+            <span>Open Direct Site</span>
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+          <button class="project-modal__close" aria-label="Close preview modal">&times;</button>
+        </div>
+      </div>
+      <div class="project-modal__body">
+        <div class="project-modal__loader">
+          <div class="project-modal__spinner"></div>
+          <span>Loading live website preview...</span>
+        </div>
+        <iframe class="project-modal__iframe" src="about:blank" title="Live Website Preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/main.js" type="module" defer></script>
+</body>
+</html>
