@@ -15,6 +15,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: Check internal links
         run: npx --yes linkinator@8 . --config ../.github/linkinator.config.json
