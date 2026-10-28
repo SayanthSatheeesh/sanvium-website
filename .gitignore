@@ -103,3 +103,6 @@ docs/
 # Caches
 .fontshare_cache/
 .browserslistrc
+
+# Third-party agent skill (local tooling, not part of the site)
+lets-scroll-main/

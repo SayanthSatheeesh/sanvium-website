@@ -1,4 +1,4 @@
-# Vercel Deployment Guide: Sanvium Technologies
+# Deployment
 
 Static site (plain HTML/CSS/JS, no build step) in `webpage/`, deployed to Vercel from GitHub, served at **https://sanviumtechnologies.com**.
 
@@ -16,23 +16,13 @@ Static site (plain HTML/CSS/JS, no build step) in `webpage/`, deployed to Vercel
 - [ ] **Legal:** have the draft Privacy Policy and Terms of Service reviewed.
 - [ ] **Local check:** `npm run dev` serves the site at http://localhost:3000.
 
-## 2. Git and GitHub
+## 2. Repository
 
-```powershell
-cd C:\vibe-codee\Freelance
-git init
-git branch -M main
-git add .
-git status          # docs/, node_modules/, .vercel/ are excluded by .gitignore
-git commit -m "Initial commit: Sanvium Technologies website"
-gh repo create sanvium-website --private --source . --push
-```
-
-`main` deploys to production. Every other branch or PR gets its own preview URL.
+Code lives at **https://github.com/SayanthSatheeesh/sanvium-website**. `main` deploys to production; every other branch or pull request gets its own preview URL. See [CONTRIBUTING.md](CONTRIBUTING.md) for the branch and pull request workflow.
 
 ## 3. Vercel project
 
-1. Vercel Dashboard → **Add New → Project** → import `sanvium-website`.
+1. Vercel Dashboard → **Add New → Project** → import `SayanthSatheeesh/sanvium-website`.
 2. Settings:
    - Framework Preset: **Other**
    - Root Directory: **`webpage`**

@@ -1,0 +1,13 @@
+{
+  "recurse": true,
+  "cleanUrls": true,
+  "verbosity": "error",
+  "skip": [
+    "^https://",
+    "^mailto:",
+    "/journal/placeholder-slug/",
+    "/journal/building-a-design-system-from-zero/",
+    "/assets/images/blog/featured-placeholder.webp",
+    "/assets/images/projects/project-placeholder.webp"
+  ]
+}
