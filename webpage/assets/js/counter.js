@@ -28,7 +28,7 @@ export function initCounters() {
         });
     }, { threshold: 0.5 });
 
-    document.querySelectorAll('.stats-card__number, .hero__stat-num').forEach(el => {
+    document.querySelectorAll('.stats-card__number, .hero__stat-num, .svc__stat-num').forEach(el => {
         observer.observe(el);
     });
 }

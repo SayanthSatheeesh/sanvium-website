@@ -8,6 +8,13 @@ export function initForm() {
     const successMsg = document.getElementById('form-success');
     const globalError = document.getElementById('form-global-error');
 
+    // Preselect the project type from links like /connect/?type=wedding
+    const typeParam = new URLSearchParams(window.location.search).get('type');
+    const typeField = document.getElementById('project-type');
+    if (typeParam && typeField && typeField.querySelector(`option[value="${CSS.escape(typeParam)}"]`)) {
+        typeField.value = typeParam;
+    }
+
     function showError(input, errorMsgElement, message) {
         if (input) input.setAttribute('aria-invalid', 'true');
         if (errorMsgElement) {

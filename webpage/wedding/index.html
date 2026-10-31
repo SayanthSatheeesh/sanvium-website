@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wedding invitation websites for Indian weddings, with a guest desk that handles per-function RSVPs, WhatsApp reminders, change alerts and a headcount for your caterer.">
+  <title>Wedding Invitations &amp; Guest Desk | Sanvium Technologies</title>
+  <link rel="canonical" href="https://sanviumtechnologies.com/wedding/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#FBF6EE">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Invite everyone. Lose track of no one. | Sanvium Weddings">
+  <meta property="og:description" content="A wedding invitation made for your family, and a team that runs the guest side: who's invited to which function, who's coming, and who needs directions.">
+  <meta property="og:image" content="https://sanviumtechnologies.com/assets/images/og/home.jpg">
+  <meta property="og:url" content="https://sanviumtechnologies.com/wedding/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@sanviumtech">
+  <meta name="twitter:title" content="Invite everyone. Lose track of no one. | Sanvium Weddings">
+  <meta name="twitter:description" content="A wedding invitation made for your family, and a team that runs the guest side: who's invited to which function, who's coming, and who needs directions.">
+  <meta name="twitter:image" content="https://sanviumtechnologies.com/assets/images/og/home.jpg">
+
+  <!-- Preconnect External Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components/nav-dock.css">
+  <link rel="stylesheet" href="/assets/css/components/nav-overlay.css">
+  <link rel="stylesheet" href="/assets/css/components/cursor-spotlight.css">
+  <link rel="stylesheet" href="/assets/css/components/split-text.css">
+  <link rel="stylesheet" href="/assets/css/components/loco-scroll.css">
+  <link rel="stylesheet" href="/assets/css/components/footer.css">
+  <link rel="stylesheet" href="/assets/css/pages/wedding.css">
+
+  <!-- GSAP & Locomotive Scroll CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js" defer></script>
+</head>
+<body class="page-wedding">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Bottom Nav Dock -->
+  <nav class="nav-dock" role="navigation" aria-label="Primary navigation">
+    <button class="nav-dock__menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="Open navigation menu">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Menu</span>
+    </button>
+    <a class="nav-dock__logo" href="/" aria-label="Sanvium Technologies - Home">
+      <span class="logo-text">Sanvium.</span>
+    </a>
+    <a class="nav-dock__cta" href="/connect/?type=wedding">Plan my invitations</a>
+  </nav>
+
+  <!-- Nav Overlay (Asymmetrical Split Drawer) -->
+  <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Site navigation" hidden>
+    <div class="nav-overlay__wrapper">
+      <nav class="nav-overlay__nav">
+        <a class="nav-overlay__item" href="/">
+          <span class="nav-overlay__num">01</span>
+          <span class="nav-overlay__title">HOME</span>
+        </a>
+        <a class="nav-overlay__item" href="/studio/">
+          <span class="nav-overlay__num">02</span>
+          <span class="nav-overlay__title">STUDIO</span>
+        </a>
+        <a class="nav-overlay__item" href="/portfolio/">
+          <span class="nav-overlay__num">03</span>
+          <span class="nav-overlay__title">PORTFOLIO</span>
+        </a>
+        <a class="nav-overlay__item active" href="/wedding/" aria-current="page">
+          <span class="nav-overlay__num">04</span>
+          <span class="nav-overlay__title">WEDDING</span>
+        </a>
+        <a class="nav-overlay__item" href="/journal/">
+          <span class="nav-overlay__num">05</span>
+          <span class="nav-overlay__title">JOURNAL</span>
+        </a>
+        <a class="nav-overlay__item" href="/connect/">
+          <span class="nav-overlay__num">06</span>
+          <span class="nav-overlay__title">CONNECT</span>
+        </a>
+      </nav>
+
+      <div class="nav-overlay__meta">
+        <div class="nav-overlay__meta-badge">
+          <span class="nav-dock__status-dot"></span>
+          <span>BOOKING NOV 2026 – MAR 2027 WEDDINGS</span>
+        </div>
+        <div class="nav-overlay__meta-title">INVITATIONS + GUEST DESK</div>
+        <div>
+          <p class="label" style="margin-bottom: 4px;">GET IN TOUCH</p>
+          <a class="nav-overlay__meta-link" href="mailto:hello@sanviumtechnologies.com">hello@sanviumtechnologies.com</a>
+        </div>
+        <div>
+          <p class="label" style="margin-bottom: 4px;">STUDIO LOCATION</p>
+          <p style="color: var(--color-silver); font-size: 0.875rem; margin: 0;">GLOBAL / REMOTE (UTC+5:30)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Container for Locomotive Inertia -->
+  <div data-scroll-container id="scroll-container">
+    <main id="main-content">
+
+      <!-- Hero -->
+      <section class="section wd-hero" data-scroll-section>
+        <div class="container wd-hero__grid">
+          <div class="wd-hero__copy">
+            <p class="wd-kicker" data-animate>Sanvium Weddings · Invitations + Guest Desk</p>
+            <h1 class="wd-hero__title" data-animate data-delay="1">Invite everyone. <em>Lose track of no one.</em></h1>
+            <p class="wd-hero__lede" data-animate data-delay="2">A wedding invitation made for your family, and a team that runs the guest side: who's invited to which function, who's coming, who needs directions, and who hasn't opened it yet.</p>
+            <div class="wd-hero__actions" data-animate data-delay="3">
+              <a class="wd-btn wd-btn--primary" href="/connect/?type=wedding">Plan my invitations</a>
+              <a class="wd-btn wd-btn--ghost" href="#demo" data-scroll-to-demo>Open the demo <span aria-hidden="true">↓</span></a>
+            </div>
+            <ul class="wd-hero__points" data-animate data-delay="4">
+              <li>Haldi to reception on one link</li>
+              <li>Every guest sees only their functions</li>
+              <li>Live headcount per function</li>
+            </ul>
+          </div>
+
+          <div class="wd-hero__art" aria-hidden="true" data-animate data-delay="2">
+            <div class="wd-stack">
+              <div class="wd-stack__card wd-stack__card--back">
+                <span class="wd-stack__fn">Haldi</span>
+                <span class="wd-stack__count">61 coming</span>
+              </div>
+              <div class="wd-stack__card wd-stack__card--mid">
+                <span class="wd-stack__fn">Sangeet</span>
+                <span class="wd-stack__count">312 coming</span>
+              </div>
+              <div class="wd-stack__card wd-stack__card--front">
+                <span class="wd-stack__bless">With the blessings of our families</span>
+                <span class="wd-stack__names">Meera <i>&amp;</i> Arjun</span>
+                <span class="wd-stack__date">19 – 21 February 2027 · Jaipur</span>
+                <span class="wd-stack__fns">Haldi · Sangeet · Wedding · Reception</span>
+                <span class="wd-stack__seal">Personal invite for the Sharma family</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem -->
+      <section class="section wd-problems" data-scroll-section>
+        <div class="container">
+          <p class="wd-kicker" data-animate>01 · Why invitations go wrong</p>
+          <h2 class="wd-h2" data-animate>A single "yes" feeds no one.</h2>
+          <p class="wd-intro" data-animate>A beautiful card is the easy part. The hard part is everything after you press send.</p>
+          <div class="wd-problems__grid">
+            <article class="wd-card" data-animate>
+              <h3 class="wd-card__title">300 yeses. Zero headcounts.</h3>
+              <p>"Haan haan, aa jayenge" isn't a number your caterer can cook for, and a family of two quietly becomes five.</p>
+            </article>
+            <article class="wd-card" data-animate data-delay="1">
+              <h3 class="wd-card__title">The haldi list isn't the sangeet list.</h3>
+              <p>One link for everyone means awkward questions at the door, and extra plates for functions people were never invited to.</p>
+            </article>
+            <article class="wd-card" data-animate data-delay="2">
+              <h3 class="wd-card__title">Nani won't tap a mystery link.</h3>
+              <p>Police have warned about fake wedding invite files on WhatsApp. Elders are right to be careful, so your invite has to feel safe.</p>
+            </article>
+            <article class="wd-card" data-animate data-delay="3">
+              <h3 class="wd-card__title">The hall changed. Did everyone hear?</h3>
+              <p>A new time or venue is only fixed when every guest invited to that function knows, not when you post it in one group.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Live demo -->
+      <section class="section wd-demo" id="demo" data-scroll-section>
+        <div class="container">
+          <p class="wd-kicker" data-animate>02 · The guest view</p>
+          <h2 class="wd-h2" data-animate>Open it the way your guests will.</h2>
+          <p class="wd-intro" data-animate>Pick a guest, reply as them, and watch the family's headcount change on the right. Everything below is demo data.</p>
+
+          <div class="wd-demo__layout" data-wedding-demo>
+            <div class="wd-demo__guest">
+              <p class="wd-demo__label" id="view-as-label">View as</p>
+              <div class="wd-viewas" role="radiogroup" aria-labelledby="view-as-label">
+                <button type="button" class="wd-viewas__btn" role="radio" aria-checked="true" data-guest="sharma">
+                  <span class="wd-viewas__name">Sharma Uncle</span>
+                  <span class="wd-viewas__meta">4 functions · up to 4 people</span>
+                </button>
+                <button type="button" class="wd-viewas__btn" role="radio" aria-checked="false" data-guest="kabir">
+                  <span class="wd-viewas__name">Kabir, college friend</span>
+                  <span class="wd-viewas__meta">Sangeet + reception · up to 2</span>
+                </button>
+                <button type="button" class="wd-viewas__btn" role="radio" aria-checked="false" data-guest="nani">
+                  <span class="wd-viewas__name">Nani-ji, family elder</span>
+                  <span class="wd-viewas__meta">Haldi + wedding · simple view</span>
+                </button>
+              </div>
+
+              <label class="wd-switch">
+                <input type="checkbox" data-simple-toggle>
+                <span class="wd-switch__track" aria-hidden="true"></span>
+                <span>Simple view: large text, no animation</span>
+              </label>
+
+              <div class="wd-phone">
+                <div class="wd-phone__notch" aria-hidden="true"></div>
+                <div class="wd-phone__screen" data-invite>
+                  <p class="wd-phone__fallback">Meera &amp; Arjun · 19 – 21 February 2027 · Jaipur. Haldi, Sangeet, Wedding and Reception, each with its own RSVP.</p>
+                </div>
+              </div>
+            </div>
+
+            <aside class="wd-panel" aria-labelledby="wd-panel-title">
+              <p class="wd-panel__tag">What the family sees · demo data</p>
+              <h3 class="wd-panel__title" id="wd-panel-title">Headcount by function</h3>
+              <div class="wd-panel__table-wrap">
+                <table class="wd-panel__table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Function</th>
+                      <th scope="col">Invited<span class="wd-panel__unit">families</span></th>
+                      <th scope="col">Coming<span class="wd-panel__unit">people</span></th>
+                      <th scope="col">Awaiting<span class="wd-panel__unit">families</span></th>
+                    </tr>
+                  </thead>
+                  <tbody data-panel-rows></tbody>
+                </table>
+              </div>
+              <p class="wd-panel__seen">Opened the invite: <strong data-panel-seen></strong></p>
+              <button type="button" class="wd-btn wd-btn--ghost wd-btn--small" data-simulate-change aria-pressed="false">Simulate a change: sangeet moves to 8:30 PM</button>
+              <p class="wd-panel__log" data-panel-log role="status" aria-live="polite"></p>
+              <p class="wd-panel__note">On a real wedding, this sheet updates as replies come in and goes to your caterer and planner as a per-function count.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="section wd-steps" data-scroll-section>
+        <div class="container">
+          <p class="wd-kicker" data-animate>03 · How the guest desk works</p>
+          <h2 class="wd-h2" data-animate>You choose the people. We handle the follow-up.</h2>
+          <ol class="wd-steps__list">
+            <li class="wd-step" data-animate>
+              <span class="wd-step__num">01</span>
+              <h3 class="wd-step__title">Send us the list</h3>
+              <p>An Excel sheet, your WhatsApp contacts, or a photo of the family diary. We type it up and check it with you.</p>
+            </li>
+            <li class="wd-step" data-animate data-delay="1">
+              <span class="wd-step__num">02</span>
+              <h3 class="wd-step__title">We design and tag</h3>
+              <p>Your invitation, designed for your family, with every guest tagged to the functions they're invited to.</p>
+            </li>
+            <li class="wd-step" data-animate data-delay="2">
+              <span class="wd-step__num">03</span>
+              <h3 class="wd-step__title">We send, chase and update</h3>
+              <p>Personal links go out on WhatsApp. We send polite reminders, and if anything changes, everyone affected hears about it.</p>
+            </li>
+            <li class="wd-step" data-animate data-delay="3">
+              <span class="wd-step__num">04</span>
+              <h3 class="wd-step__title">Your caterer gets a number</h3>
+              <p>A headcount per function, ready before the caterer's cut-off. You get your evenings back.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- What's handled -->
+      <section class="section wd-handled" data-scroll-section>
+        <div class="container">
+          <p class="wd-kicker" data-animate>04 · What's handled</p>
+          <h2 class="wd-h2" data-animate>Everything after "send".</h2>
+          <ul class="wd-handled__grid">
+            <li class="wd-feature" data-animate><h3>RSVP per function</h3><p>Guests choose how many people are coming to each function, not just yes or no.</p></li>
+            <li class="wd-feature" data-animate><h3>Personal guest links</h3><p>Each family sees their own name and only the functions they're invited to.</p></li>
+            <li class="wd-feature" data-animate><h3>Reminders that stop on reply</h3><p>Families who haven't answered get a gentle nudge. Families who have answered hear nothing more.</p></li>
+            <li class="wd-feature" data-animate><h3>Change alerts</h3><p>A new time or hall reaches exactly the guests invited to that function, and the link updates itself.</p></li>
+            <li class="wd-feature" data-animate><h3>Made for elders</h3><p>A simple view with large text and no animation, plus a printable PDF for the cards you still hand over in person.</p></li>
+            <li class="wd-feature" data-animate><h3>Directions to the right door</h3><p>Not just a map pin: which gate, which hall, and where to park.</p></li>
+            <li class="wd-feature" data-animate><h3>Arrivals and pickups</h3><p>Collect flight and train details from out-of-town guests and share a pickup sheet with your team. (Concierge)</p></li>
+            <li class="wd-feature" data-animate><h3>A thank-you afterwards</h3><p>One message to every guest with your thanks and a link to the photos.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Trust -->
+      <section class="section wd-trust" data-scroll-section>
+        <div class="container wd-trust__inner">
+          <div>
+            <p class="wd-kicker wd-kicker--light" data-animate>05 · Safe to open</p>
+            <h2 class="wd-h2 wd-h2--light" data-animate>No apps. No files. No strangers.</h2>
+          </div>
+          <ul class="wd-trust__list">
+            <li data-animate><strong>Opens in the browser.</strong> Your invitation is a web page with your names in the link. Nobody downloads or installs anything.</li>
+            <li data-animate data-delay="1"><strong>From a sender guests recognise.</strong> Messages come from a WhatsApp Business sender named for your wedding, never from a random number.</li>
+            <li data-animate data-delay="2"><strong>Your guest list stays yours.</strong> Phone numbers are used only for your wedding, and we delete them after it.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="section wd-pricing" id="pricing" data-scroll-section>
+        <div class="container">
+          <p class="wd-kicker" data-animate>06 · Pricing</p>
+          <h2 class="wd-h2" data-animate>One price per wedding. No subscriptions.</h2>
+          <p class="wd-intro" data-animate>Prices start from the figures below. Your final quote depends on the number of guests and functions, and we confirm it before you pay.</p>
+          <div class="wd-pricing__grid">
+            <article class="wd-plan" data-animate>
+              <h3 class="wd-plan__name">Invite</h3>
+              <p class="wd-plan__price"><span>from</span> ₹7,999</p>
+              <p class="wd-plan__for">For families who will send the invite themselves.</p>
+              <ul class="wd-plan__list">
+                <li>Invitation website designed for your family</li>
+                <li>Every function, with gate, hall and parking directions</li>
+                <li>RSVP per function, with a headcount sheet</li>
+                <li>Simple view and printable PDF for elders</li>
+                <li>Two rounds of changes</li>
+              </ul>
+              <a class="wd-btn wd-btn--ghost" href="/connect/?type=wedding">Ask about Invite</a>
+            </article>
+            <article class="wd-plan wd-plan--featured" data-animate data-delay="1">
+              <p class="wd-plan__badge">Recommended</p>
+              <h3 class="wd-plan__name">Invite + Guest Desk</h3>
+              <p class="wd-plan__price"><span>from</span> ₹19,999</p>
+              <p class="wd-plan__for">For weddings with several functions and a long guest list.</p>
+              <ul class="wd-plan__list">
+                <li>Everything in Invite</li>
+                <li>Personal links: each guest sees only their functions</li>
+                <li>Sent on WhatsApp for you, with reminders</li>
+                <li>Change alerts to everyone affected</li>
+                <li>Live headcount and "opened" tracking for the family</li>
+                <li>Family members can view and edit the list</li>
+              </ul>
+              <a class="wd-btn wd-btn--primary" href="/connect/?type=wedding">Plan my invitations</a>
+            </article>
+            <article class="wd-plan" data-animate data-delay="2">
+              <h3 class="wd-plan__name">Concierge</h3>
+              <p class="wd-plan__price"><span>from</span> ₹44,999</p>
+              <p class="wd-plan__for">For large and destination weddings.</p>
+              <ul class="wd-plan__list">
+                <li>Everything in Guest Desk</li>
+                <li>A person answering guests on WhatsApp through wedding week</li>
+                <li>Arrival details, pickups and room sheets</li>
+                <li>Phone calls to elders who prefer a voice</li>
+                <li>Save-the-date reel and thank-you message</li>
+              </ul>
+              <a class="wd-btn wd-btn--ghost" href="/connect/?type=wedding">Ask about Concierge</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Planners & venues -->
+      <section class="section wd-partners" data-scroll-section>
+        <div class="container wd-partners__inner">
+          <div>
+            <p class="wd-kicker" data-animate>07 · For planners &amp; venues</p>
+            <h2 class="wd-h2" data-animate>Your brand on every invite.</h2>
+          </div>
+          <div data-animate data-delay="1">
+            <p>Run the guest desk for your couples under your own name. We build each invitation and run the messages and headcounts in the background, so your team can focus on the day itself.</p>
+            <p class="wd-partners__price">Season packs <strong>from ₹74,999 for 5 weddings</strong>.</p>
+            <a class="wd-btn wd-btn--primary" href="/connect/?type=wedding">Talk to us about partnering</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section wd-faq" data-scroll-section>
+        <div class="container">
+          <p class="wd-kicker" data-animate>08 · Questions</p>
+          <h2 class="wd-h2" data-animate>Before you ask.</h2>
+          <div class="wd-faq__list" data-animate>
+            <details class="wd-faq__item">
+              <summary>Do guests need to download an app?</summary>
+              <p>No. The invitation opens in any phone browser from the WhatsApp message. Guests don't sign up or log in.</p>
+            </details>
+            <details class="wd-faq__item">
+              <summary>Can elders still get a printed card?</summary>
+              <p>Yes. Every plan includes a printable PDF of your invitation, and the simple view is made for guests who find small text or animations hard.</p>
+            </details>
+            <details class="wd-faq__item">
+              <summary>What if a time or venue changes?</summary>
+              <p>We update the invitation and, on Guest Desk and Concierge, send an alert to every guest invited to that function. Nobody has to reprint anything or forward a new link.</p>
+            </details>
+            <details class="wd-faq__item">
+              <summary>Whose WhatsApp number sends the messages?</summary>
+              <p>A WhatsApp Business sender named for your wedding, so guests see who it's from. Replies come to us, and we pass anything personal on to you.</p>
+            </details>
+            <details class="wd-faq__item">
+              <summary>How early should we start?</summary>
+              <p>About eight weeks before your first function. That leaves time to design the invitation, send it, chase replies, and give your caterer a count before their cut-off.</p>
+            </details>
+            <details class="wd-faq__item">
+              <summary>What happens to our guest list afterwards?</summary>
+              <p>We send you a final export, then delete guests' phone numbers. Your invitation page can stay online as a keepsake if you'd like.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="section wd-cta" data-scroll-section>
+        <div class="container wd-cta__inner">
+          <h2 class="wd-h2 wd-h2--light" data-animate>Your first function is closer than it looks.</h2>
+          <p data-animate data-delay="1">We're taking weddings for the November 2026 to March 2027 season. Tell us your dates and roughly how many guests, and we'll reply within 24 hours.</p>
+          <a class="wd-btn wd-btn--light" href="/connect/?type=wedding" data-animate data-delay="2">Plan my invitations</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo" data-scroll-section>
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__copy">&copy; <span id="year"></span> Sanvium Technologies. All rights reserved.</p>
+          <nav class="footer__legal" aria-label="Legal navigation">
+            <a href="/privacy-policy/">Privacy Policy</a>
+            <a href="/terms-of-service/">Terms of Service</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </div><!-- /data-scroll-container -->
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/main.js" type="module" defer></script>
+</body>
+</html>

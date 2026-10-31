@@ -38,7 +38,6 @@
   <link rel="stylesheet" href="/assets/css/components/cursor-spotlight.css">
   <link rel="stylesheet" href="/assets/css/components/split-text.css">
   <link rel="stylesheet" href="/assets/css/components/loco-scroll.css">
-  <link rel="stylesheet" href="/assets/css/components/lets-scroll-world.css">
   <link rel="stylesheet" href="/assets/css/components/project-card-iframe.css">
   <link rel="stylesheet" href="/assets/css/components/footer.css">
   <link rel="stylesheet" href="/assets/css/pages/home.css">
@@ -81,13 +80,13 @@
           <span class="nav-overlay__num">02</span>
           <span class="nav-overlay__title">STUDIO</span>
         </a>
-        <a class="nav-overlay__item" href="/capabilities/">
-          <span class="nav-overlay__num">03</span>
-          <span class="nav-overlay__title">CAPABILITIES</span>
-        </a>
         <a class="nav-overlay__item" href="/portfolio/">
-          <span class="nav-overlay__num">04</span>
+          <span class="nav-overlay__num">03</span>
           <span class="nav-overlay__title">PORTFOLIO</span>
+        </a>
+        <a class="nav-overlay__item" href="/wedding/">
+          <span class="nav-overlay__num">04</span>
+          <span class="nav-overlay__title">WEDDING</span>
         </a>
         <a class="nav-overlay__item" href="/journal/">
           <span class="nav-overlay__num">05</span>
@@ -192,235 +191,71 @@
         </div>
       </section>
 
-      <!-- lets-scroll: Fly-Through Studio World Experience -->
-      <section class="agency-world-section" id="agency-world" data-scroll-section>
-        <div class="world-container" id="world-track">
-          <div class="world-sticky">
-            <canvas class="world-canvas"></canvas>
-
-            <!-- World HUD Overlay -->
-            <div class="world-hud">
-              <div class="world-hud__badge">
-                <span class="world-hud__dot"></span>
-                <span>STUDIO FLIGHT // SCENE <span id="world-scene-index">01 / 05</span></span>
-              </div>
-              <div class="world-hud__controls">
-                <span class="world-hud__hint">SCROLL TO FLY // CLICK RAIL TO JUMP</span>
-              </div>
-            </div>
-
-            <!-- Route Rail -->
-            <nav class="world-rail" aria-label="World scene navigation">
-              <button class="world-rail__step is-active" aria-label="Scene 1: Studio Entrance">
-                <span class="world-rail__indicator"></span>
-                <span class="world-rail__label">01 // ENTRANCE</span>
-              </button>
-              <button class="world-rail__step" aria-label="Scene 2: Architecture Lab">
-                <span class="world-rail__indicator"></span>
-                <span class="world-rail__label">02 // ARCHITECTURE</span>
-              </button>
-              <button class="world-rail__step" aria-label="Scene 3: Code Core">
-                <span class="world-rail__indicator"></span>
-                <span class="world-rail__label">03 // ENGINEERING</span>
-              </button>
-              <button class="world-rail__step" aria-label="Scene 4: Spatial Realm">
-                <span class="world-rail__indicator"></span>
-                <span class="world-rail__label">04 // SPATIAL 3D</span>
-              </button>
-              <button class="world-rail__step" aria-label="Scene 5: Launchpad">
-                <span class="world-rail__indicator"></span>
-                <span class="world-rail__label">05 // LAUNCHPAD</span>
-              </button>
-            </nav>
-
-            <!-- Pinned Narrative Scene Cards -->
-            <div class="world-scenes">
-              <!-- Scene 1 -->
-              <article class="world-card is-visible" data-scene="0">
-                <span class="world-card__num">SCENE 01 // SANCTUARY</span>
-                <h3 class="world-card__title">WHERE VISION MEETS VELOCITY</h3>
-                <p class="world-card__desc">Step inside our creative laboratory where ambitious ideas transform into iconic digital landmarks. We engineer high-velocity experiences for category leaders.</p>
-                <div class="world-card__tags">
-                  <span class="world-card__tag">Full-Service Studio</span>
-                  <span class="world-card__tag">Global Remote</span>
-                  <span class="world-card__tag">High-Motion UX</span>
-                </div>
-              </article>
-
-              <!-- Scene 2 -->
-              <article class="world-card" data-scene="1">
-                <span class="world-card__num">SCENE 02 // LAB</span>
-                <h3 class="world-card__title">BRAND ARCHITECTURE</h3>
-                <p class="world-card__desc">Forging distinct, timeless identities from foundational strategy to bespoke typographic systems, design tokens, and comprehensive design systems.</p>
-                <div class="world-card__tags">
-                  <span class="world-card__tag">Identity Systems</span>
-                  <span class="world-card__tag">Design Tokens</span>
-                  <span class="world-card__tag">Brand Strategy</span>
-                </div>
-              </article>
-
-              <!-- Scene 3 -->
-              <article class="world-card" data-scene="2">
-                <span class="world-card__num">SCENE 03 // CORE</span>
-                <h3 class="world-card__title">DIGITAL ENGINEERING</h3>
-                <p class="world-card__desc">Precision-crafted web & mobile architectures engineered for speed, sub-second latency, accessibility, and frictionless user conversion.</p>
-                <div class="world-card__tags">
-                  <span class="world-card__tag">Modern Fullstack</span>
-                  <span class="world-card__tag">Zero-Latency APIs</span>
-                  <span class="world-card__tag">Scalable Cloud</span>
-                </div>
-              </article>
-
-              <!-- Scene 4 -->
-              <article class="world-card" data-scene="3">
-                <span class="world-card__num">SCENE 04 // REALM</span>
-                <h3 class="world-card__title">SPATIAL & MOTION</h3>
-                <p class="world-card__desc">Interactive WebGL environments, 3D physics simulations, and cinematic micro-interactions that elevate digital spaces into unforgettable interactive art.</p>
-                <div class="world-card__tags">
-                  <span class="world-card__tag">Three.js & WebGL</span>
-                  <span class="world-card__tag">GSAP Motion</span>
-                  <span class="world-card__tag">Spatial Canvas</span>
-                </div>
-              </article>
-
-              <!-- Scene 5 -->
-              <article class="world-card" data-scene="4">
-                <span class="world-card__num">SCENE 05 // LAUNCHPAD</span>
-                <h3 class="world-card__title">GLOBAL IMPACT & ROI</h3>
-                <p class="world-card__desc">Over 380+ projects deployed across higher education, luxury hospitality, and high-growth SaaS with 98% client satisfaction rate.</p>
-                <div class="world-card__tags">
-                  <span class="world-card__tag">380+ Delivered</span>
-                  <span class="world-card__tag">98% Satisfaction</span>
-                  <span class="world-card__tag">Live Support</span>
-                </div>
-              </article>
-            </div>
-
-            <!-- Scene Progress Bar -->
-            <div class="world-progress">
-              <div class="world-progress__bar is-running"></div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- What We Craft: stacked card deck (flipped by scroll on desktop, swipe/buttons on touch) -->
-      <section class="craft" id="what-we-offer" aria-label="What we craft" data-scroll-section>
-        <div class="craft__track" id="craft-track">
-          <div class="craft__sticky">
-            <div class="container craft__layout">
-              <div class="craft__intro">
-                <p class="label">04 DISCIPLINES // ONE TEAM</p>
-                <h2 class="section__title" data-split>WHAT WE CRAFT</h2>
-                <p class="craft__lede">From the first brand mark to the final line of code, every layer of your digital flagship is built in-house.</p>
-                <div class="craft__nav">
-                  <button class="craft__btn" data-craft-prev aria-label="Previous discipline">
-                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                  <span class="craft__counter" aria-live="polite"><span data-craft-current>01</span> / 04</span>
-                  <button class="craft__btn" data-craft-next aria-label="Next discipline">
-                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                </div>
-                <div class="craft__progress" aria-hidden="true"><span class="craft__progress-bar"></span></div>
-                <p class="craft__hint" aria-hidden="true">SCROLL TO FLIP ↓</p>
-              </div>
-
-              <div class="craft__deck">
-                <article class="craft-card">
-                  <div class="craft-card__top">
-                    <svg class="craft-card__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><circle cx="12" cy="14" r="3"/></svg>
-                    <span class="craft-card__num" aria-hidden="true">01</span>
-                  </div>
-                  <h3 class="craft-card__title">Visual Identity</h3>
-                  <p class="craft-card__desc">High-impact brand systems that resonate globally and drive measurable engagement.</p>
-                  <ul class="craft-card__tags">
-                    <li>Logo Systems</li><li>Brand Guidelines</li><li>Typography</li>
-                  </ul>
-                </article>
-                <article class="craft-card">
-                  <div class="craft-card__top">
-                    <svg class="craft-card__icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M11 9l6 2.5-2.5 1-1 2.5z"/></svg>
-                    <span class="craft-card__num" aria-hidden="true">02</span>
-                  </div>
-                  <h3 class="craft-card__title">Precision UX</h3>
-                  <p class="craft-card__desc">Interfaces engineered for clarity and engagement, delivering frictionless user journeys.</p>
-                  <ul class="craft-card__tags">
-                    <li>User Research</li><li>Wireframes</li><li>Design Systems</li>
-                  </ul>
-                </article>
-                <article class="craft-card">
-                  <div class="craft-card__top">
-                    <svg class="craft-card__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
-                    <span class="craft-card__num" aria-hidden="true">03</span>
-                  </div>
-                  <h3 class="craft-card__title">Digital Engineering</h3>
-                  <p class="craft-card__desc">Web and mobile solutions built to scale, with robust architecture and clean code.</p>
-                  <ul class="craft-card__tags">
-                    <li>Web Apps</li><li>Headless CMS</li><li>Performance</li>
-                  </ul>
-                </article>
-                <article class="craft-card">
-                  <div class="craft-card__top">
-                    <svg class="craft-card__icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg>
-                    <span class="craft-card__num" aria-hidden="true">04</span>
-                  </div>
-                  <h3 class="craft-card__title">Visual Storytelling</h3>
-                  <p class="craft-card__desc">Cinematic content and strategic narratives that captivate audiences and elevate brands.</p>
-                  <ul class="craft-card__tags">
-                    <li>Motion Design</li><li>Art Direction</li><li>Content Strategy</li>
-                  </ul>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section services" id="services" data-scroll-section>
+      <!-- What We Do: fanned card stack (fans out in view on desktop, swipe stack on touch) -->
+      <section class="section svc" id="what-we-offer" aria-labelledby="svc-title" data-scroll-section>
         <div class="container">
-          <div class="services__header">
-            <h2 class="services__title" data-split>Capabilities</h2>
-            <p class="services__desc" data-animate>Explore our portfolio of work and discover what we build.</p>
+          <header class="svc__header">
+            <div>
+              <p class="label">03 SERVICES // ONE TEAM</p>
+              <h2 class="svc__title" id="svc-title" data-split>What we actually do</h2>
+            </div>
+            <dl class="svc__stats" data-animate>
+              <div class="svc__stat">
+                <dt>Projects shipped</dt>
+                <dd><span class="svc__stat-num" data-count="380">380</span>+</dd>
+              </div>
+              <div class="svc__stat">
+                <dt>Happy clients</dt>
+                <dd><span class="svc__stat-num" data-count="98">98</span>%</dd>
+              </div>
+            </dl>
+          </header>
+
+          <div class="svc-deck" data-svc-deck>
+            <article class="svc-card svc-card--volt" aria-labelledby="svc-card-1">
+              <span class="svc-card__frame" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b>⟳</b></span>
+              <p class="svc-card__num">01</p>
+              <h3 class="svc-card__title" id="svc-card-1">Websites &amp; automation</h3>
+              <p class="svc-card__pitch">Fast sites that sell, plus the automations behind them, so leads, bookings and follow-ups happen without anyone copy-pasting.</p>
+              <ul class="svc-card__list">
+                <li>Business websites</li><li>Landing pages</li><li>E-commerce</li><li>CRM &amp; form automation</li><li>WhatsApp &amp; email flows</li>
+              </ul>
+            </article>
+            <article class="svc-card svc-card--paper" aria-labelledby="svc-card-2">
+              <span class="svc-card__frame" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b>⟳</b></span>
+              <p class="svc-card__num">02</p>
+              <h3 class="svc-card__title" id="svc-card-2">Social media management</h3>
+              <p class="svc-card__pitch">We plan, make and post your content every week, then reply, report and adjust so your pages keep growing instead of going quiet.</p>
+              <ul class="svc-card__list">
+                <li>Content calendar</li><li>Reels &amp; post design</li><li>Captions &amp; hashtags</li><li>Community replies</li><li>Monthly reports</li>
+              </ul>
+            </article>
+            <article class="svc-card svc-card--ink" aria-labelledby="svc-card-3">
+              <span class="svc-card__frame" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b>⟳</b></span>
+              <p class="svc-card__num">03</p>
+              <h3 class="svc-card__title" id="svc-card-3">Digital marketing</h3>
+              <p class="svc-card__pitch">Ads and search that bring in customers you can count. We set the budget, run the campaigns and show you what every spend returned.</p>
+              <ul class="svc-card__list">
+                <li>Google &amp; Meta ads</li><li>SEO</li><li>Lead generation</li><li>Email campaigns</li><li>Analytics &amp; tracking</li>
+              </ul>
+            </article>
           </div>
-          <ol class="services__list">
-            <li class="services__item" data-animate>
-              <span class="services__num">01</span>
-              <h3 class="services__name">Digital Engineering</h3>
-              <a href="/capabilities/#digital-engineering" class="services__arrow" aria-label="Learn more about Digital Engineering">
-                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19L19 5M19 5v10M19 5H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </li>
-            <li class="services__item" data-animate>
-              <span class="services__num">02</span>
-              <h3 class="services__name">Brand Architecture</h3>
-              <a href="/capabilities/#brand-architecture" class="services__arrow" aria-label="Learn more about Brand Architecture">
-                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19L19 5M19 5v10M19 5H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </li>
-            <li class="services__item" data-animate>
-              <span class="services__num">03</span>
-              <h3 class="services__name">UX/UI Systems</h3>
-              <a href="/capabilities/#ux-ui-systems" class="services__arrow" aria-label="Learn more about UX/UI Systems">
-                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19L19 5M19 5v10M19 5H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </li>
-            <li class="services__item" data-animate>
-              <span class="services__num">04</span>
-              <h3 class="services__name">Motion & Storytelling</h3>
-              <a href="/capabilities/#motion-storytelling" class="services__arrow" aria-label="Learn more about Motion & Storytelling">
-                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19L19 5M19 5v10M19 5H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </li>
-            <li class="services__item" data-animate>
-              <span class="services__num">05</span>
-              <h3 class="services__name">Spatial Design</h3>
-              <a href="/capabilities/#spatial-design" class="services__arrow" aria-label="Learn more about Spatial Design">
-                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19L19 5M19 5v10M19 5H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </li>
-          </ol>
+
+          <div class="svc-deck__controls">
+            <p class="svc-deck__hint" aria-hidden="true"><span class="svc-deck__hint--fine">Hover a card to pick it up</span><span class="svc-deck__hint--touch">Swipe the top card</span></p>
+            <div class="svc-deck__nav">
+              <button class="svc-deck__btn" type="button" data-deck-prev aria-label="Previous service">←</button>
+              <span class="svc-deck__count" aria-live="polite"><span data-deck-current>01</span> / 03</span>
+              <button class="svc-deck__btn" type="button" data-deck-next aria-label="Next service">→</button>
+            </div>
+            <a class="svc-deck__cta" href="/connect/">Start a project →</a>
+          </div>
+        </div>
+
+        <div class="svc__ticker" aria-hidden="true">
+          <div class="svc__ticker-track">
+            <span>Websites ✶ Automation ✶ Social ✶ Marketing ✶ </span><span>Websites ✶ Automation ✶ Social ✶ Marketing ✶ </span>
+          </div>
         </div>
       </section>
 

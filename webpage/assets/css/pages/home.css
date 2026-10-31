@@ -383,7 +383,7 @@
 
 
 
-/* Features ("WHAT WE CRAFT") */
+/* Shared section title */
 .section__title {
   font-family: var(--font-heading);
   font-size: var(--fs-h1);
@@ -393,334 +393,334 @@
   margin-bottom: var(--space-8);
 }
 
-/* "What We Craft" stacked card deck */
-.craft {
+/* "What We Do": brutalist fanned card stack */
+.svc {
   position: relative;
-  background: radial-gradient(circle at 70% 55%, var(--color-volt-subtle), transparent 55%);
-}
-
-.craft__sticky {
-  padding-block: clamp(3rem, 6vh, 5rem);
-}
-
-.craft__layout {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;
-  gap: var(--space-16);
-}
-
-.craft__intro .label {
-  margin-bottom: var(--space-3);
-}
-
-.craft__intro .section__title {
-  margin-bottom: var(--space-5);
-}
-
-.craft__lede {
-  max-width: 420px;
-  margin-bottom: var(--space-10);
-  font-size: var(--fs-body-lg);
-  line-height: 1.6;
-  color: var(--color-text-secondary);
-}
-
-.craft__nav {
-  display: flex;
-  align-items: center;
-  gap: var(--space-5);
-}
-
-.craft__btn {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-border);
-  background: transparent;
-  color: var(--color-text-primary);
-  cursor: pointer;
-  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
-}
-
-.craft__btn:hover:not(:disabled) {
-  background: var(--color-volt);
-  border-color: var(--color-volt);
-  color: var(--color-text-inverse);
-}
-
-.craft__btn:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-
-.craft__btn svg {
-  width: 20px;
-  height: 20px;
-}
-
-.craft__counter {
-  font-family: var(--font-mono);
-  font-size: var(--fs-sm);
-  letter-spacing: var(--ls-wide);
-  color: var(--color-text-secondary);
-}
-
-.craft__counter [data-craft-current] {
-  color: var(--color-volt);
-}
-
-.craft__progress {
-  width: 100%;
-  max-width: 280px;
-  height: 2px;
-  margin-top: var(--space-6);
-  background: var(--color-border);
   overflow: hidden;
+  padding-bottom: 0;
 }
 
-.craft__progress-bar {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: var(--color-volt);
-  box-shadow: 0 0 10px var(--color-volt);
-  transform: scaleX(0.25);
-  transform-origin: left center;
-}
-
-.craft__hint {
-  margin-top: var(--space-4);
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  letter-spacing: var(--ls-wider);
-  color: var(--color-text-muted);
-}
-
-/* Deck: plain list without JS; .is-deck stacks the cards in 3D */
-.craft__deck {
-  display: grid;
-  gap: var(--space-6);
-}
-
-.craft__deck.is-deck {
-  position: relative;
-  display: block;
-  height: 460px;
-  perspective: 1400px;
-}
-
-.craft-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: clamp(28px, 4vw, 48px);
-  background: linear-gradient(160deg, var(--color-surface-03) 0%, var(--color-surface-01) 55%);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 229, 0, 0.35);
-  overflow: hidden;
-}
-
-/* Yellow edge light along the top of each card */
-.craft-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 12%;
-  right: 12%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-volt), transparent);
-  box-shadow: 0 0 18px var(--color-volt);
-}
-
-.is-deck .craft-card {
-  position: absolute;
-  inset: 0;
-  transform-origin: 50% 0%;
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-}
-
-.craft-card.is-active {
-  border-color: var(--color-border-accent);
-}
-
-.craft-card__top {
+.svc__header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: auto;
+  align-items: flex-end;
+  gap: var(--space-8);
+  margin-bottom: var(--space-16);
 }
 
-.craft-card__icon {
-  width: 56px;
-  height: 56px;
-  padding: 12px;
-  border-radius: var(--radius-md);
-  background: var(--color-volt-dim);
-  border: 1px solid var(--color-border-accent);
-  fill: none;
-  stroke: var(--color-volt);
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.craft-card__num {
+.svc__title {
   font-family: var(--font-heading);
-  font-size: clamp(4rem, 8vw, 6.5rem);
+  font-size: var(--fs-display);
   font-weight: 900;
-  line-height: 0.8;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 229, 0, 0.45);
-}
-
-.craft-card__title {
-  margin: var(--space-10) 0 var(--space-3);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-}
-
-.craft-card__desc {
-  max-width: 440px;
-  margin-bottom: var(--space-6);
-  font-size: var(--fs-body);
-  line-height: 1.6;
-  color: var(--color-text-secondary);
-}
-
-.craft-card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  padding: 0;
-  list-style: none;
-}
-
-.craft-card__tags li {
-  padding: 6px 14px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.03);
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.08em;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
-  color: var(--color-silver);
+  max-width: 9ch;
+  margin-top: var(--space-4);
 }
 
-/* Desktop pin: tall track, sticky viewport-high stage (mirrors PIN_QUERY in loco-scroll.js) */
-@media (hover: hover) and (pointer: fine) and (min-width: 992px) and (prefers-reduced-motion: no-preference) {
-  .craft__track {
-    height: 340vh;
-  }
-
-  .craft__sticky {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-
-  .craft__layout {
-    width: 100%;
-  }
-}
-
-@media (max-width: 991px) {
-  .craft__layout {
-    grid-template-columns: 1fr;
-    gap: var(--space-10);
-  }
-
-  .craft__hint {
-    display: none;
-  }
-
-  .craft__deck.is-deck {
-    height: 420px;
-    touch-action: pan-y;
-  }
-}
-
-/* Services ("CAPABILITIES") */
-.services__header {
-  margin-bottom: var(--space-12);
-}
-
-.services__title {
-  font-family: var(--font-heading);
-  font-size: var(--fs-h1);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  margin-bottom: var(--space-2);
-}
-
-.services__desc {
-  font-size: var(--fs-body-lg);
-  color: var(--color-text-secondary);
-}
-
-.services__list {
-  list-style: none;
-  padding: 0;
-}
-
-.services__item {
+.svc__stats {
   display: flex;
-  align-items: center;
-  padding: var(--space-8) 0;
-  border-bottom: 1px solid var(--color-border);
-  gap: var(--space-6);
-  transition: color var(--transition-fast);
-}
-
-.services__item:hover {
-  color: var(--color-volt);
-}
-
-.services__item:hover .services__arrow {
-  background: var(--color-volt);
-  color: var(--color-text-inverse);
-  transform: scale(1.1);
-}
-
-.services__num {
-  font-family: var(--font-mono);
-  color: var(--color-text-muted);
-  font-size: var(--fs-body-lg);
-  width: 48px;
-}
-
-.services__name {
-  flex: 1;
-  font-family: var(--font-heading);
-  font-size: clamp(1.85rem, 3.8vw, 3rem);
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  gap: var(--space-4);
   margin: 0;
 }
 
-.services__arrow {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-primary);
-  transition: all var(--transition-fast);
+.svc__stat {
+  min-width: 150px;
+  padding: var(--space-4) var(--space-5);
+  border: 3px solid var(--color-volt);
+  box-shadow: 6px 6px 0 var(--color-volt);
+  background: var(--color-void);
 }
 
-.services__arrow svg {
-  width: 24px;
-  height: 24px;
+.svc__stat dt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.svc__stat dd {
+  margin: var(--space-1) 0 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-volt);
+}
+
+/* Deck: cards sit absolutely in a fixed-height stage; JS sets --x/--y/--r/--s/--z per card */
+.svc-deck {
+  --card-w: min(360px, 100%);
+  position: relative;
+  height: 560px;
+}
+
+.svc-card {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  z-index: var(--z, 1);
+  display: flex;
+  flex-direction: column;
+  width: var(--card-w);
+  min-height: 460px;
+  margin-left: calc(var(--card-w) / -2);
+  padding: var(--space-8);
+  border: 3px solid var(--color-void);
+  box-shadow: 10px 10px 0 var(--color-void);
+  transform: translate3d(var(--x, 0px), var(--y, 0px), 0) rotate(var(--r, 0deg)) scale(var(--s, 1));
+  transition: transform 0.6s cubic-bezier(0.34, 1.4, 0.64, 1), box-shadow var(--transition-base);
+  outline: none;
+  user-select: none;
+}
+
+.svc-card--volt { background: var(--color-volt); color: var(--color-text-inverse); }
+.svc-card--paper { background: var(--color-text-primary); color: var(--color-text-inverse); }
+.svc-card--ink { background: var(--color-surface-01); color: var(--color-text-primary); border-color: var(--color-volt); }
+
+.svc-card.is-active {
+  box-shadow: 16px 16px 0 var(--color-void);
+}
+
+.svc-card.is-dragging {
+  transition: none;
+}
+
+.svc-card__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-body-lg);
+  font-weight: 700;
+  margin: 0;
+}
+
+.svc-card__title {
+  margin: var(--space-6) 0 var(--space-4);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.svc-card__pitch {
+  margin: 0 0 var(--space-6);
+  font-size: var(--fs-body);
+  line-height: 1.45;
+}
+
+.svc-card__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.svc-card__list li {
+  padding: var(--space-1) var(--space-3);
+  border: 2px solid currentColor;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Design-tool selection frame on the active card: dashed box, 8 handles, rotate knob */
+.svc-card__frame {
+  position: absolute;
+  inset: -14px;
+  border: 2px dashed var(--color-text-primary);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  pointer-events: none;
+}
+
+.svc-card.is-active .svc-card__frame {
+  opacity: 1;
+}
+
+.svc-card__frame i {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--color-text-primary);
+  border: 2px solid var(--color-void);
+  translate: -50% -50%;
+}
+
+.svc-card__frame i:nth-child(1) { left: 0; top: 0; }
+.svc-card__frame i:nth-child(2) { left: 50%; top: 0; }
+.svc-card__frame i:nth-child(3) { left: 100%; top: 0; }
+.svc-card__frame i:nth-child(4) { left: 100%; top: 50%; }
+.svc-card__frame i:nth-child(5) { left: 100%; top: 100%; }
+.svc-card__frame i:nth-child(6) { left: 50%; top: 100%; }
+.svc-card__frame i:nth-child(7) { left: 0; top: 100%; }
+.svc-card__frame i:nth-child(8) { left: 0; top: 50%; }
+
+.svc-card__frame b {
+  position: absolute;
+  left: 50%;
+  top: -46px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  translate: -50% 0;
+  border: 2px solid var(--color-text-primary);
+  border-radius: 50%;
+  background: var(--color-void);
+  color: var(--color-text-primary);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Controls under the deck */
+.svc-deck__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.svc-deck__hint {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.svc-deck__hint--touch { display: none; }
+
+.svc-deck__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.svc-deck__btn {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--color-text-primary);
+  background: var(--color-void);
+  color: var(--color-text-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.svc-deck__btn:hover,
+.svc-deck__btn:focus-visible {
+  background: var(--color-volt);
+  color: var(--color-text-inverse);
+  border-color: var(--color-volt);
+}
+
+.svc-deck__count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+.svc-deck__count [data-deck-current] {
+  color: var(--color-volt);
+}
+
+.svc-deck__cta {
+  padding: var(--space-3) var(--space-5);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-text-inverse);
+  background: var(--color-volt);
+  border: 3px solid var(--color-volt);
+  box-shadow: 5px 5px 0 var(--color-text-primary);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Brutalist press: the button drops into its own shadow */
+.svc-deck__cta:hover,
+.svc-deck__cta:focus-visible {
+  transform: translate(5px, 5px);
+  box-shadow: 0 0 0 var(--color-text-primary);
+}
+
+/* Ticker band */
+.svc__ticker {
+  margin-top: var(--space-24);
+  padding: var(--space-4) 0;
+  background: var(--color-volt);
+  color: var(--color-text-inverse);
+  border-block: 3px solid var(--color-text-inverse);
+  overflow: hidden;
+  transform: rotate(-1.5deg) scale(1.02);
+}
+
+.svc__ticker-track {
+  display: flex;
+  width: max-content;
+  animation: svc-ticker 22s linear infinite;
+}
+
+.svc__ticker-track span {
+  padding-right: 0.4em;
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@keyframes svc-ticker {
+  to { transform: translateX(-50%); }
+}
+
+/* Swipe mode (set by JS on touch / narrow screens) */
+.svc-deck.is-swipe {
+  --card-w: min(340px, 100%);
+  height: 540px;
+  touch-action: pan-y;
+}
+
+.svc-deck.is-swipe .svc-card {
+  top: 24px;
+}
+
+.svc-deck.is-swipe ~ .svc-deck__controls .svc-deck__hint--fine { display: none; }
+.svc-deck.is-swipe ~ .svc-deck__controls .svc-deck__hint--touch { display: inline; }
+
+@media (prefers-reduced-motion: reduce) {
+  .svc__ticker-track { animation: none; }
+  .svc-card { transition: none; }
+}
+
+@media (max-width: 900px) {
+  .svc__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .svc-deck__controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .svc-deck__hint { width: 100%; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .svc__stats { width: 100%; }
+  .svc__stat { flex: 1; min-width: 0; }
+  .svc-card { padding: var(--space-6); min-height: 440px; }
 }
 
 /* Featured Projects - Asymmetrical Neo-Bento Layout */

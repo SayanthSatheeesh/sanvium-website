@@ -106,6 +106,13 @@ export function startLocoScroll() {
   }
 }
 
+// Recalculate Locomotive's scroll limits after content changes height (accordions, re-rendered widgets)
+export function updateLocoScroll() {
+  if (locoInstance) {
+    locoInstance.update();
+  }
+}
+
 // Pinned scroll sections only on desktop pointers with motion allowed (mirrors the CSS media query)
 const PIN_QUERY = '(hover: hover) and (pointer: fine) and (min-width: 992px) and (prefers-reduced-motion: no-preference)';
 
